@@ -9,11 +9,18 @@ export function generateStaticParams() {
   return data.countries.map((c) => ({ slug: c.guide_slug }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const { slug } = await params;
   const country = data.countries.find((c) => c.guide_slug === slug);
+
   return {
-    title: country ? `${country.country_name} Visa Guide — VisaFlow` : "VisaFlow Guide",
+    title: country
+      ? `${country.country_name} Visa Guide — VisaFlow`
+      : "VisaFlow Guide",
     description: country
       ? `Step-by-step guidance for tourist, study, work, and PR/citizenship visas for ${country.country_name}.`
       : "Step-by-step visa application guidance.",
@@ -31,7 +38,14 @@ export default async function GuideDetailPage({
   const { category } = await searchParams;
 
   const country = data.countries.find((c) => c.guide_slug === slug);
-  if (!country) notFound();
+  if (!country) {
+    notFound();
+  }
 
-  return <GuideDetailClient country={country} initialCategoryId={category} />;
+  return (
+    <GuideDetailClient
+      country={country}
+      initialCategoryId={category}
+    />
+  );
 }

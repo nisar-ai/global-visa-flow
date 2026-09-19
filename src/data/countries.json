@@ -1,706 +1,2325 @@
-{
-  "_meta": {
-    "note": "Sample/demo dataset for a portfolio project. Visa rules, fees, and links change frequently — always confirm on the linked official government site before applying. Coverage currently includes 5 countries; extend the 'countries' array with the same shape to add more.",
-    "last_reviewed": "2026-07-24"
-  },
-  "countries": [
-    {
-      "country_code": "DE",
-      "country_name": "Germany",
-      "region": "Europe",
-      "guide_slug": "germany",
-      "flag_emoji": "🇩🇪",
-      "accent_color": "#e0a13c",
-      "official_links": {
-        "ministry": "https://www.auswaertiges-amt.de/en",
-        "visa_portal": "https://www.auswaertiges-amt.de/en/visa-service/consular-services-portal"
+[
+  {
+    "country_name": "United States",
+    "visa_free": 0,
+    "visa_on_arrival": 0,
+    "eta": 0,
+    "visa_required": 1,
+    "passport_rank": 9,
+    "visa_categories": [
+      {
+        "id": "tourist",
+        "label": "Tourist visa (B‑2)",
+        "type": "visa_required",
+        "overview": "For tourism, visiting family/friends, or medical treatment.",
+        "steps": [
+          "Complete DS‑160 online.",
+          "Pay the MRV visa fee.",
+          "Book and attend visa interview at US embassy/consulate.",
+          "Provide biometrics if required.",
+          "Wait for visa decision and passport return."
+        ],
+        "checklist": [
+          "Passport valid for at least 6 months beyond intended stay",
+          "DS‑160 confirmation page",
+          "MRV fee receipt",
+          "Appointment confirmation",
+          "Photo meeting US visa specifications",
+          "Proof of funds and ties to home country",
+          "Travel itinerary (if available)"
+        ],
+        "processing_time": "Varies by embassy; often 2–8 weeks after interview.",
+        "fees": "MRV fee approx. USD 185; check official site for current amount.",
+        "base_fee_usd": 185,
+        "service_fee_usd": 0,
+        "biometrics_fee_usd": 0,
+        "official_link_label": "US Visa Information",
+        "official_link_url": "https://travel.state.gov"
       },
-      "visa_categories": [
-        {
-          "category_id": "tourist",
-          "label": "Tourist / Schengen Visa",
-          "visa_type": "Schengen Visa (Type C) — Tourism",
-          "fee_amount": {
-            "amount": 90,
-            "currency": "EUR"
-          },
-          "processing_time": "10-15 calendar days",
-          "required_documents": [
-            "Valid passport (issued within 10 years, valid 3+ months beyond stay)",
-            "Completed Schengen visa application form",
-            "Travel health insurance covering at least €30,000",
-            "Proof of accommodation (hotel booking or invitation letter)",
-            "Bank statements showing sufficient funds for the trip"
-          ],
-          "step_by_step_guideline": [
-            "Confirm you need a Schengen visa and Germany is your main destination.",
-            "Book an appointment at the German consulate or an authorized visa center.",
-            "Submit your application, biometrics, and supporting documents in person.",
-            "Track your application and collect your passport once the visa is issued."
-          ],
-          "processing_estimate": {
-            "min": 10,
-            "max": 15,
-            "unit": "days"
-          }
-        },
-        {
-          "category_id": "study",
-          "label": "Student Visa",
-          "visa_type": "National Visa (Type D) — Study",
-          "fee_amount": {
-            "amount": 75,
-            "currency": "EUR"
-          },
-          "processing_time": "4-12 weeks",
-          "required_documents": [
-            "University admission/enrollment letter",
-            "Proof of a blocked account (Sperrkonto) or equivalent financing proof",
-            "Health insurance valid in Germany",
-            "Academic certificates and transcripts",
-            "Valid passport and biometric photos"
-          ],
-          "step_by_step_guideline": [
-            "Secure admission to a German university or a recognized preparatory course.",
-            "Open a blocked account and deposit the required annual living-cost amount.",
-            "Book a visa appointment and submit your documents at the German mission.",
-            "Enter Germany and register your address and residence permit locally."
-          ],
-          "processing_estimate": {
-            "min": 4,
-            "max": 12,
-            "unit": "weeks"
-          }
-        },
-        {
-          "category_id": "work",
-          "label": "Work Visa",
-          "visa_type": "National Visa (Type D) — Skilled Worker",
-          "fee_amount": {
-            "amount": 75,
-            "currency": "EUR"
-          },
-          "processing_time": "15-20 business days",
-          "required_documents": [
-            "Valid passport (minimum 6 months validity beyond intended stay)",
-            "Completed national visa application form",
-            "Biometric passport photographs (2, taken within last 6 months)",
-            "Proof of qualification recognition (Anerkennung) or employment contract",
-            "Proof of health insurance valid in Germany"
-          ],
-          "step_by_step_guideline": [
-            "Book an appointment at the German consulate or embassy in your home country.",
-            "Submit the completed application form along with all required supporting documents.",
-            "Attend the biometric data collection and in-person interview at the consulate.",
-            "Track application status online and collect the visa once a decision has been issued."
-          ],
-          "processing_estimate": {
-            "min": 15,
-            "max": 20,
-            "unit": "days"
-          }
-        },
-        {
-          "category_id": "pr",
-          "label": "PR / Citizenship",
-          "visa_type": "Settlement Permit & Naturalization (Einbürgerung)",
-          "fee_amount": {
-            "amount": 255,
-            "currency": "EUR"
-          },
-          "processing_time": "6-18 months, after required residency years are met",
-          "required_documents": [
-            "Proof of continuous legal residence (typically 5-8 years, less with strong integration)",
-            "German language certificate (B1 minimum, C1 for faster naturalization)",
-            "Passed 'Leben in Deutschland' naturalization test certificate",
-            "Proof of stable income and no reliance on public welfare",
-            "Clean criminal record certificate (Führungszeugnis)"
-          ],
-          "step_by_step_guideline": [
-            "Confirm you meet the minimum legal residence period for your visa route.",
-            "Pass the required German language level and the naturalization test.",
-            "Submit your application with proof of income and a clean record to your local immigration office.",
-            "Attend the final interview and receive your settlement permit or naturalization certificate."
-          ],
-          "processing_estimate": {
-            "min": 6,
-            "max": 18,
-            "unit": "months"
-          }
-        }
-      ],
-      "currency": "EUR",
-      "language_code": "de",
-      "language_name": "Deutsch"
-    },
-    {
-      "country_code": "GB",
-      "country_name": "United Kingdom",
-      "region": "Europe",
-      "guide_slug": "united-kingdom",
-      "flag_emoji": "🇬🇧",
-      "accent_color": "#3b5bdb",
-      "official_links": {
-        "ministry": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
-        "visa_portal": "https://www.gov.uk/browse/visas-immigration"
+      {
+        "id": "study",
+        "label": "Student visa (F‑1)",
+        "type": "visa_required",
+        "overview": "For full‑time academic study at a SEVP‑certified US institution.",
+        "steps": [
+          "Get accepted and receive Form I‑20.",
+          "Pay SEVIS I‑901 fee.",
+          "Complete DS‑160 and pay MRV fee.",
+          "Attend visa interview with documents.",
+          "Wait for visa issuance."
+        ],
+        "checklist": [
+          "Valid passport",
+          "Form I‑20",
+          "DS‑160 confirmation",
+          "SEVIS fee receipt",
+          "MRV fee receipt",
+          "Photo meeting specifications",
+          "Proof of funds for tuition and living costs",
+          "Academic transcripts and test scores (if requested)"
+        ],
+        "processing_time": "Often 2–6 weeks after interview.",
+        "fees": "SEVIS fee + MRV fee; check official site for current amounts.",
+        "base_fee_usd": 185,
+        "service_fee_usd": 0,
+        "biometrics_fee_usd": 0,
+        "official_link_label": "Study in the US",
+        "official_link_url": "https://educationusa.state.gov"
       },
-      "visa_categories": [
-        {
-          "category_id": "tourist",
-          "label": "Tourist / Visitor Visa",
-          "visa_type": "Standard Visitor Visa",
-          "fee_amount": {
-            "amount": 115,
-            "currency": "GBP"
-          },
-          "processing_time": "About 3 weeks",
-          "required_documents": [
-            "Valid passport or travel document",
-            "Completed online Standard Visitor application",
-            "Bank statements showing sufficient funds",
-            "Proof of accommodation for your stay",
-            "Return or onward travel itinerary"
-          ],
-          "step_by_step_guideline": [
-            "Check whether your nationality needs a visa or an ETA to visit the UK.",
-            "Complete the Standard Visitor visa application online and pay the fee.",
-            "Book and attend a biometric appointment at a visa application centre.",
-            "Wait for the decision — most are made within about 3 weeks."
-          ],
-          "processing_estimate": {
-            "min": 15,
-            "max": 21,
-            "unit": "days"
-          }
-        },
-        {
-          "category_id": "study",
-          "label": "Student Visa",
-          "visa_type": "Student Visa",
-          "fee_amount": {
-            "amount": 490,
-            "currency": "GBP"
-          },
-          "processing_time": "About 3 weeks",
-          "required_documents": [
-            "Confirmation of Acceptance for Studies (CAS) from a licensed sponsor",
-            "Valid passport",
-            "Proof of funds for tuition and living costs",
-            "Academic qualifications and transcripts",
-            "Tuberculosis test results, if required for your country"
-          ],
-          "step_by_step_guideline": [
-            "Get your Confirmation of Acceptance for Studies (CAS) from your UK institution.",
-            "Complete the online Student visa application and pay the fee plus the Immigration Health Surcharge.",
-            "Provide biometric data at a visa application centre or via the ID-check app.",
-            "Receive your decision and set up your UKVI account for your eVisa."
-          ],
-          "processing_estimate": {
-            "min": 15,
-            "max": 21,
-            "unit": "days"
-          }
-        },
-        {
-          "category_id": "work",
-          "label": "Work Visa",
-          "visa_type": "Skilled Worker Visa",
-          "fee_amount": {
-            "amount": 719,
-            "currency": "GBP"
-          },
-          "processing_time": "3-8 weeks",
-          "required_documents": [
-            "Valid passport or other travel document",
-            "Certificate of Sponsorship (CoS) reference number from a licensed UK employer",
-            "Proof of English language proficiency (approved test or qualification)",
-            "Proof of sufficient personal savings (bank statements, if required)",
-            "Tuberculosis (TB) test results, if applying from a listed country"
-          ],
-          "step_by_step_guideline": [
-            "Obtain a Certificate of Sponsorship from a UK Home Office-licensed employer.",
-            "Complete the online visa application form on the UK government website.",
-            "Pay the visa application fee and the Immigration Health Surcharge (IHS).",
-            "Attend a biometric appointment at a visa application centre and await the decision."
-          ],
-          "processing_estimate": {
-            "min": 21,
-            "max": 56,
-            "unit": "days"
-          }
-        },
-        {
-          "category_id": "pr",
-          "label": "PR / Citizenship",
-          "visa_type": "Indefinite Leave to Remain (ILR) & British Citizenship",
-          "fee_amount": {
-            "amount": 3226,
-            "currency": "GBP"
-          },
-          "processing_time": "Typically after 5 years' residence; ILR decision within 6 months",
-          "required_documents": [
-            "Proof of continuous residence for the qualifying period on your visa route",
-            "Pass certificate for the Life in the UK Test",
-            "English language qualification (B1 or above)",
-            "Criminal record / good character evidence",
-            "Current visa/BRP or eVisa share code"
-          ],
-          "step_by_step_guideline": [
-            "Confirm your visa route's qualifying residence period (rules are under active reform in 2026).",
-            "Pass the Life in the UK Test and meet the English language requirement.",
-            "Apply for Indefinite Leave to Remain (ILR) online through the UKVI account.",
-            "Once ILR is granted, apply separately for British citizenship (naturalisation) if desired."
-          ],
-          "official_links": {
-            "visa_portal": "https://www.gov.uk/browse/visas-immigration/settle-in-the-uk",
-            "ministry": "https://www.gov.uk/government/organisations/uk-visas-and-immigration"
-          },
-          "processing_estimate": {
-            "min": 60,
-            "max": 120,
-            "unit": "months"
-          }
-        }
+      {
+        "id": "work",
+        "label": "Work visa (e.g. H‑1B)",
+        "type": "visa_required",
+        "overview": "For specialty occupations; employer usually files petition.",
+        "steps": [
+          "Employer files Form I‑129 petition.",
+          "If approved, apply for visa at US embassy/consulate.",
+          "Attend interview and provide biometrics.",
+          "Wait for visa issuance."
+        ],
+        "checklist": [
+          "Valid passport",
+          "I‑797 approval notice copy",
+          "DS‑160 confirmation",
+          "MRV fee receipt",
+          "Employment letter and supporting documents",
+          "Photos as per specification"
+        ],
+        "processing_time": "Petition processing varies; visa stage often a few weeks.",
+        "fees": "Multiple fees (petition + MRV); amounts vary by category and employer.",
+        "official_link_label": "US Work Visas",
+        "official_link_url": "https://www.uscis.gov/working-in-the-united-states"
+      }
+    ],
+    "pr_info": {
+      "overview": "Permanent residence (Green Card) is usually via employment, family, or diversity lottery.",
+      "main_pathways": [
+        "Employment‑based (EB‑1/2/3, etc.)",
+        "Family‑based sponsorship",
+        "Diversity Visa Lottery (if eligible)"
       ],
-      "currency": "GBP",
-      "language_code": "en",
-      "language_name": "English"
-    },
-    {
-      "country_code": "US",
-      "country_name": "United States",
-      "region": "North America",
-      "guide_slug": "united-states",
-      "flag_emoji": "🇺🇸",
-      "accent_color": "#4c6ef5",
-      "official_links": {
-        "ministry": "https://travel.state.gov/content/travel/en/us-visas.html",
-        "visa_portal": "https://travel.state.gov/content/travel/en/us-visas.html",
-        "embassy_locator": "https://www.usembassy.gov/"
-      },
-      "visa_categories": [
-        {
-          "category_id": "tourist",
-          "label": "Tourist Visa",
-          "visa_type": "B-2 Tourist Visa",
-          "fee_amount": {
-            "amount": 185,
-            "currency": "USD"
-          },
-          "processing_time": "Varies widely by embassy — often several weeks",
-          "required_documents": [
-            "Valid passport (6+ months beyond planned stay recommended)",
-            "Form DS-160 confirmation page",
-            "Visa photo meeting US requirements",
-            "Evidence of ties to your home country (job, family, property)",
-            "Proof of sufficient funds for the trip"
-          ],
-          "step_by_step_guideline": [
-            "Complete Form DS-160 online and print the confirmation page.",
-            "Pay the visa application (MRV) fee.",
-            "Schedule and attend your interview at a US embassy or consulate.",
-            "Provide biometrics at the interview and await the visa decision."
-          ],
-          "processing_estimate": {
-            "min": 14,
-            "max": 120,
-            "unit": "days"
-          }
-        },
-        {
-          "category_id": "study",
-          "label": "Student Visa",
-          "visa_type": "F-1 Student Visa",
-          "fee_amount": {
-            "amount": 185,
-            "currency": "USD"
-          },
-          "processing_time": "Varies by embassy, plus SEVIS processing",
-          "required_documents": [
-            "Form I-20 from a SEVP-certified school",
-            "SEVIS I-901 fee payment receipt",
-            "Form DS-160 confirmation page",
-            "Proof of financial support for tuition and living costs",
-            "Academic transcripts and standardized test scores"
-          ],
-          "step_by_step_guideline": [
-            "Get accepted and receive Form I-20 from a SEVP-certified US school.",
-            "Pay the SEVIS I-901 fee and complete Form DS-160.",
-            "Schedule and attend your F-1 visa interview at a US embassy or consulate.",
-            "Provide biometrics and await your visa decision before travel."
-          ],
-          "processing_estimate": {
-            "min": 14,
-            "max": 120,
-            "unit": "days"
-          }
-        },
-        {
-          "category_id": "work",
-          "label": "Work Visa",
-          "visa_type": "H-1B Specialty Occupation Visa",
-          "fee_amount": {
-            "amount": 190,
-            "currency": "USD"
-          },
-          "processing_time": "2-6 months (standard); 15 calendar days with premium processing",
-          "required_documents": [
-            "Valid passport (recommended validity of at least 6 months)",
-            "Form DS-160 confirmation page",
-            "Approved Form I-797 (Notice of Action) from USCIS",
-            "Employer's Labor Condition Application (LCA) certified by the Department of Labor",
-            "Educational credentials and resume demonstrating specialty occupation qualification"
-          ],
-          "step_by_step_guideline": [
-            "Employer files a Labor Condition Application (LCA) and then Form I-129 petition with USCIS.",
-            "Complete Form DS-160 online and schedule a visa interview at a US embassy or consulate.",
-            "Attend the visa interview and provide biometric data along with supporting documents.",
-            "Await administrative processing and passport return with the visa stamp, if approved."
-          ],
-          "processing_estimate": {
-            "min": 60,
-            "max": 180,
-            "unit": "days"
-          }
-        },
-        {
-          "category_id": "pr",
-          "label": "PR / Citizenship",
-          "visa_type": "Green Card (Permanent Residency) & Naturalization",
-          "fee_amount": {
-            "amount": 1440,
-            "currency": "USD"
-          },
-          "processing_time": "Green Card: several months to years; naturalization eligible after 5 years (3 if married to a citizen)",
-          "required_documents": [
-            "Approved immigrant petition (Form I-130 family or I-140 employment)",
-            "Form I-485 (Adjustment of Status) or consular processing documents",
-            "Medical examination report (Form I-693)",
-            "Proof of continuous residence and physical presence",
-            "Form N-400 naturalization application (once eligible)"
-          ],
-          "step_by_step_guideline": [
-            "Have an eligible family member or employer file an immigrant petition (I-130 or I-140) on your behalf.",
-            "File for adjustment of status (I-485) or complete consular processing to receive your Green Card.",
-            "Maintain continuous residence for the required period (usually 5 years, or 3 if married to a US citizen).",
-            "File Form N-400, attend your biometrics/interview, pass the civics test, and take the Oath of Allegiance."
-          ],
-          "official_links": {
-            "visa_portal": "https://www.uscis.gov/green-card",
-            "ministry": "https://www.uscis.gov/citizenship"
-          },
-          "processing_estimate": {
-            "min": 60,
-            "max": 96,
-            "unit": "months"
-          }
-        }
+      "typical_requirements": [
+        "Approved immigrant petition",
+        "Medical examination",
+        "Police certificates",
+        "Proof of financial support"
       ],
-      "currency": "USD",
-      "language_code": "en",
-      "language_name": "English"
-    },
-    {
-      "country_code": "SA",
-      "country_name": "Saudi Arabia",
-      "region": "Middle East",
-      "guide_slug": "saudi-arabia",
-      "flag_emoji": "🇸🇦",
-      "accent_color": "#2f9e6e",
-      "official_links": {
-        "ministry": "https://www.mofa.gov.sa/en",
-        "visa_portal": "https://visa.mofa.gov.sa/"
-      },
-      "visa_categories": [
-        {
-          "category_id": "tourist",
-          "label": "Tourist eVisa",
-          "visa_type": "Tourist eVisa (single/multiple entry)",
-          "fee_amount": {
-            "amount": 480,
-            "currency": "SAR"
-          },
-          "processing_time": "Minutes to a few hours (standard online approval)",
-          "required_documents": [
-            "Valid passport (minimum 6 months validity from application date)",
-            "Recent digital passport-style photo",
-            "Confirmed return or onward flight booking",
-            "Proof of accommodation (hotel booking or host address)",
-            "Valid debit/credit card for the online eVisa fee"
-          ],
-          "step_by_step_guideline": [
-            "Confirm your nationality is on the eVisa eligibility list on the official tourist eVisa portal.",
-            "Create an account and complete the online application with passport and travel details.",
-            "Upload your photo and pay the eVisa fee securely by card.",
-            "Receive the eVisa by email — it is a multiple-entry visa valid for one year, up to 90 days per visit."
-          ],
-          "official_links": {
-            "visa_portal": "https://visa.visitsaudi.com/",
-            "ministry": "https://www.mofa.gov.sa/en"
-          },
-          "processing_estimate": {
-            "min": 0,
-            "max": 1,
-            "unit": "days"
-          }
-        },
-        {
-          "category_id": "study",
-          "label": "Student Visa",
-          "visa_type": "Student Visa (university-sponsored)",
-          "fee_amount": {
-            "amount": 2000,
-            "currency": "SAR"
-          },
-          "processing_time": "3-6 weeks (varies by university and consulate workload)",
-          "required_documents": [
-            "Valid passport (minimum 6 months validity)",
-            "Official admission/acceptance letter from a Saudi university or institute",
-            "Educational certificates and transcripts, attested by relevant authorities",
-            "Medical fitness certificate and required vaccination records",
-            "Passport-sized photographs meeting Saudi visa specifications"
-          ],
-          "step_by_step_guideline": [
-            "Secure admission at a Saudi university, which issues a sponsorship letter for your student visa.",
-            "The university submits your visa block/authorization through the Ministry of Foreign Affairs system.",
-            "Submit your passport and attested documents at the Saudi embassy or consulate for visa stamping.",
-            "Enter Saudi Arabia and complete Iqama (residence permit) registration through your university."
-          ],
-          "official_links": {
-            "visa_portal": "https://visa.mofa.gov.sa/",
-            "ministry": "https://www.mofa.gov.sa/en"
-          },
-          "processing_estimate": {
-            "min": 21,
-            "max": 42,
-            "unit": "days"
-          }
-        },
-        {
-          "category_id": "work",
-          "label": "Work Visa",
-          "visa_type": "Work Visa (Iqama-sponsored)",
-          "fee_amount": {
-            "amount": 2000,
-            "currency": "SAR"
-          },
-          "processing_time": "10-15 business days",
-          "required_documents": [
-            "Valid passport (minimum 6 months validity)",
-            "Signed employment contract attested by the Ministry of Labor",
-            "Educational certificates attested by the Saudi embassy and Ministry of Foreign Affairs",
-            "Medical fitness certificate from an approved medical center",
-            "Passport-sized photographs meeting Saudi visa specifications"
-          ],
-          "step_by_step_guideline": [
-            "Sponsoring employer obtains a work permit block visa from the Ministry of Human Resources.",
-            "Submit passport, attested documents, and medical certificate to the Saudi embassy for visa stamping.",
-            "Enter Saudi Arabia and complete the biometric enrollment for the Iqama (residence permit).",
-            "Receive the issued Iqama and finalize employer registration with GOSI and other authorities."
-          ],
-          "official_links": {
-            "visa_portal": "https://visa.mofa.gov.sa/",
-            "ministry": "https://www.mofa.gov.sa/en"
-          },
-          "processing_estimate": {
-            "min": 10,
-            "max": 15,
-            "unit": "days"
-          }
-        },
-        {
-          "category_id": "umrah",
-          "label": "Umrah Visa",
-          "visa_type": "Umrah Visa (via Nusuk platform)",
-          "fee_amount": {
-            "amount": 300,
-            "currency": "SAR"
-          },
-          "processing_time": "1-5 business days",
-          "required_documents": [
-            "Valid passport (minimum 6 months validity)",
-            "Recent digital passport-style photo",
-            "Proof of Umrah package/accommodation booking in Makkah and Madinah",
-            "Return or onward flight booking",
-            "Health/vaccination documentation required for the current season (e.g. meningitis)"
-          ],
-          "step_by_step_guideline": [
-            "Register on the official Nusuk Umrah platform as an international pilgrim.",
-            "Choose an integrated Umrah package or book visa, accommodation, and transport individually.",
-            "Submit passport details and pay the Umrah visa fee online through Nusuk.",
-            "Receive your Umrah visa and use the Nusuk app in-country to manage permits and Rawdah time slots."
-          ],
-          "official_links": {
-            "visa_portal": "https://umrah.nusuk.sa/",
-            "ministry": "https://www.mofa.gov.sa/en"
-          },
-          "processing_estimate": {
-            "min": 1,
-            "max": 5,
-            "unit": "days"
-          }
-        },
-        {
-          "category_id": "pr",
-          "label": "PR / Citizenship",
-          "visa_type": "Premium Residency (Saudi Green Card)",
-          "fee_amount": {
-            "amount": 800,
-            "currency": "SAR"
-          },
-          "processing_time": "Several weeks to months, depending on category",
-          "required_documents": [
-            "Valid passport (minimum 6 months validity)",
-            "Proof of financial eligibility (investment, property, or income requirement)",
-            "Clean criminal record certificate",
-            "Medical fitness certificate",
-            "Completed Premium Residency application form"
-          ],
-          "step_by_step_guideline": [
-            "Check eligibility for the Premium Residency (permanent) or renewable annual category.",
-            "Gather financial, medical, and background-check documentation.",
-            "Submit your application through the Premium Residency program under the Ministry of Interior.",
-            "Attend any required interview and receive your Premium Residency card upon approval."
-          ],
-          "processing_estimate": {
-            "min": 1,
-            "max": 3,
-            "unit": "months"
-          }
-        }
-      ],
-      "currency": "SAR",
-      "language_code": "ar",
-      "language_name": "العربية"
-    },
-    {
-      "country_code": "TR",
-      "country_name": "Turkey",
-      "region": "Europe/Asia",
-      "guide_slug": "turkey",
-      "flag_emoji": "🇹🇷",
-      "accent_color": "#e0483e",
-      "official_links": {
-        "ministry": "https://www.mfa.gov.tr/visa-information-for-foreigners.en.mfa",
-        "visa_portal": "https://www.evisa.gov.tr/en/"
-      },
-      "visa_categories": [
-        {
-          "category_id": "tourist",
-          "label": "Tourist e-Visa",
-          "visa_type": "e-Visa (tourism/business)",
-          "fee_amount": {
-            "amount": 50,
-            "currency": "USD"
-          },
-          "processing_time": "Minutes (instant online approval for most nationalities)",
-          "required_documents": [
-            "Valid passport (minimum 6 months validity)",
-            "Return or onward flight ticket",
-            "Proof of accommodation in Turkey",
-            "Proof of sufficient funds for the stay",
-            "Valid debit/credit card for the online e-Visa fee"
-          ],
-          "step_by_step_guideline": [
-            "Check your nationality's eligibility on the official e-Visa portal.",
-            "Complete the short online application with passport and travel details.",
-            "Pay the e-Visa fee securely online.",
-            "Receive your e-Visa by email and present it with your passport on arrival."
-          ],
-          "processing_estimate": {
-            "min": 0,
-            "max": 1,
-            "unit": "days"
-          }
-        },
-        {
-          "category_id": "study",
-          "label": "Student Residence Permit",
-          "visa_type": "Student Residence Permit",
-          "fee_amount": {
-            "amount": 70,
-            "currency": "USD"
-          },
-          "processing_time": "2-4 weeks after arrival",
-          "required_documents": [
-            "University acceptance/enrollment letter",
-            "Valid passport",
-            "Proof of health insurance valid in Turkey",
-            "Proof of accommodation",
-            "Passport-sized photographs"
-          ],
-          "step_by_step_guideline": [
-            "Get accepted by a Turkish university and receive your enrollment letter.",
-            "Apply for a student visa at a Turkish consulate, if required for your nationality.",
-            "After arrival, apply online (e-ikamet) for your student residence permit.",
-            "Submit biometrics and documents at the local migration office to collect your permit card."
-          ],
-          "processing_estimate": {
-            "min": 14,
-            "max": 28,
-            "unit": "days"
-          }
-        },
-        {
-          "category_id": "work",
-          "label": "Work Visa",
-          "visa_type": "Work Permit Visa",
-          "fee_amount": {
-            "amount": 60,
-            "currency": "USD"
-          },
-          "processing_time": "4-8 weeks",
-          "required_documents": [
-            "Valid passport (minimum 6 months validity)",
-            "Signed employment contract or job offer letter from Turkish employer",
-            "Notarized and translated educational diplomas or professional certificates",
-            "Passport-sized biometric photographs (2)",
-            "Proof of accommodation in Turkey during the work assignment"
-          ],
-          "step_by_step_guideline": [
-            "Employer submits the work permit application through the Turkish Ministry of Labor's online system.",
-            "Applicant submits the corresponding visa application at the Turkish consulate in their home country.",
-            "Attend the consulate interview and biometric appointment, if required.",
-            "Collect the approved work visa and register for the residence permit upon arrival in Turkey."
-          ],
-          "processing_estimate": {
-            "min": 28,
-            "max": 56,
-            "unit": "days"
-          }
-        },
-        {
-          "category_id": "pr",
-          "label": "PR / Citizenship",
-          "visa_type": "Long-Term Residence Permit & Turkish Citizenship",
-          "fee_amount": {
-            "amount": 90,
-            "currency": "USD"
-          },
-          "processing_time": "Several months, after residency or investment criteria are met",
-          "required_documents": [
-            "Proof of continuous legal residence (typically 8 years) or qualifying investment (e.g. real estate purchase)",
-            "Valid passport and existing residence permit history",
-            "Proof of financial stability and health insurance",
-            "Clean criminal record certificate",
-            "Completed long-term residence or citizenship application form"
-          ],
-          "step_by_step_guideline": [
-            "Confirm your route: standard long-term residence (8 years) or the investment-based citizenship program.",
-            "Gather residence history, financial, and clean-record documentation.",
-            "Apply at the Provincial Directorate of Migration Management (residence) or Ministry of Interior (citizenship).",
-            "Attend biometrics/interview and receive your long-term permit or citizenship decision."
-          ],
-          "processing_estimate": {
-            "min": 96,
-            "max": 120,
-            "unit": "months"
-          }
-        }
-      ],
-      "currency": "TRY",
-      "language_code": "tr",
-      "language_name": "Türkçe"
+      "processing_time": "Often several months to years depending on category and country caps.",
+      "official_link_label": "US Green Card",
+      "official_link_url": "https://www.uscis.gov/green-card"
     }
-  ]
-}
+  },
+  {
+    "country_name": "United Kingdom",
+    "visa_free": 0,
+    "visa_on_arrival": 0,
+    "eta": 0,
+    "visa_required": 1,
+    "passport_rank": 4,
+    "visa_categories": [
+      {
+        "id": "tourist",
+        "label": "Standard Visitor visa",
+        "type": "visa_required",
+        "overview": "For tourism, short courses, business visits, or visiting family.",
+        "steps": [
+          "Complete online application on GOV.UK.",
+          "Pay the visa fee and book biometrics appointment.",
+          "Attend biometrics at visa application centre.",
+          "Submit supporting documents (if required).",
+          "Wait for decision."
+        ],
+        "checklist": [
+          "Valid passport",
+          "Completed online application form",
+          "Visa fee payment confirmation",
+          "Biometrics appointment confirmation",
+          "Proof of funds",
+          "Travel itinerary and accommodation details",
+          "Letter of invitation (if visiting family/friends)",
+          "Evidence of ties to home country"
+        ],
+        "processing_time": "Usually around 3 weeks, can vary.",
+        "fees": "Standard visitor visa fee; check current fee on GOV.UK.",
+        "base_fee_usd": 110,
+        "service_fee_usd": 0,
+        "biometrics_fee_usd": 0,
+        "official_link_label": "UK Visit Visa",
+        "official_link_url": "https://www.gov.uk/standard-visitor-visa"
+      },
+      {
+        "id": "study",
+        "label": "Student visa",
+        "type": "visa_required",
+        "overview": "For studying a course in the UK with a licensed sponsor.",
+        "steps": [
+          "Receive CAS from your institution.",
+          "Complete online visa application.",
+          "Pay visa fee and Immigration Health Surcharge (IHS).",
+          "Book and attend biometrics appointment.",
+          "Submit required documents and wait for decision."
+        ],
+        "checklist": [
+          "Valid passport",
+          "CAS reference number",
+          "Proof of English language proficiency (if required)",
+          "Financial evidence (tuition + living costs)",
+          "TB test certificate (if applicable)",
+          "Visa fee and IHS payment confirmation",
+          "Biometrics appointment confirmation"
+        ],
+        "processing_time": "Often around 3 weeks from outside the UK.",
+        "fees": "Visa fee + IHS; check current rates on GOV.UK.",
+        "base_fee_usd": 400,
+        "service_fee_usd": 0,
+        "biometrics_fee_usd": 0,
+        "official_link_label": "UK Student Visa",
+        "official_link_url": "https://www.gov.uk/student-visa"
+      },
+      {
+        "id": "work",
+        "label": "Skilled Worker visa",
+        "type": "visa_required",
+        "overview": "For skilled workers with a job offer from a licensed sponsor.",
+        "steps": [
+          "Get a job offer and Certificate of Sponsorship.",
+          "Complete online application.",
+          "Pay visa fee and IHS.",
+          "Attend biometrics appointment.",
+          "Submit documents and wait for decision."
+        ],
+        "checklist": [
+          "Valid passport",
+          "Certificate of Sponsorship reference",
+          "Proof of English language",
+          "Financial evidence",
+          "TB test (if applicable)",
+          "Visa fee and IHS payment confirmation"
+        ],
+        "processing_time": "Usually around 3 weeks.",
+        "fees": "Visa fee + IHS; varies by length and salary.",
+        "official_link_label": "UK Skilled Worker",
+        "official_link_url": "https://www.gov.uk/skilled-worker-visa"
+      }
+    ],
+    "pr_info": {
+      "overview": "Indefinite Leave to Remain (ILR) is the UK’s permanent residence.",
+      "main_pathways": [
+        "After 5 years on Skilled Worker or similar routes",
+        "Family routes (spouse/partner of British citizen/ILR holder)",
+        "Long residence (10 years lawful residence)"
+      ],
+      "typical_requirements": [
+        "Continuous lawful residence",
+        "Life in the UK test",
+        "English language requirement",
+        "No serious criminal record"
+      ],
+      "processing_time": "Several months; priority services available.",
+      "official_link_label": "UK ILR",
+      "official_link_url": "https://www.gov.uk/indefinite-leave-to-remain"
+    }
+  },
+  {
+    "country_name": "Canada",
+    "visa_free": 0,
+    "visa_on_arrival": 0,
+    "eta": 1,
+    "visa_required": 0,
+    "passport_rank": 7,
+    "visa_categories": [
+      {
+        "id": "eviza",
+        "label": "Visitor visa / eTA (depending on passport)",
+        "type": "eta",
+        "overview": "Many nationalities need a visitor visa; some need only an eTA if flying to Canada.",
+        "steps": [
+          "Check if you need a visa or eTA.",
+          "Apply online via IRCC.",
+          "Pay fees and give biometrics (if required).",
+          "Wait for decision."
+        ],
+        "checklist": [
+          "Valid passport",
+          "Completed application form",
+          "Photos",
+          "Proof of funds",
+          "Travel purpose documents",
+          "Biometrics (if required)"
+        ],
+        "processing_time": "Varies by country; often a few weeks.",
+        "fees": "Visitor visa or eTA fee + biometrics if applicable.",
+        "base_fee_usd": 100,
+        "service_fee_usd": 0,
+        "biometrics_fee_usd": 85,
+        "official_link_label": "Visit Canada",
+        "official_link_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada.html"
+      },
+      {
+        "id": "study",
+        "label": "Study permit",
+        "type": "visa_required",
+        "overview": "Required for most international students studying in Canada.",
+        "steps": [
+          "Get acceptance from a designated learning institution.",
+          "Apply for study permit online.",
+          "Pay fees and give biometrics.",
+          "Wait for decision."
+        ],
+        "checklist": [
+          "Letter of acceptance",
+          "Valid passport",
+          "Proof of funds",
+          "Photos",
+          "Medical exam (if required)",
+          "Police certificate (if required)"
+        ],
+        "processing_time": "Varies; apply well in advance.",
+        "fees": "Study permit fee + biometrics.",
+        "base_fee_usd": 150,
+        "service_fee_usd": 0,
+        "biometrics_fee_usd": 85,
+        "official_link_label": "Study in Canada",
+        "official_link_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada.html"
+      },
+      {
+        "id": "work",
+        "label": "Work permit",
+        "type": "visa_required",
+        "overview": "For temporary foreign workers; often requires LMIA or exempt category.",
+        "steps": [
+          "Get job offer and, if needed, LMIA.",
+          "Apply for work permit.",
+          "Pay fees and give biometrics.",
+          "Wait for decision."
+        ],
+        "checklist": [
+          "Job offer letter",
+          "LMIA (if required)",
+          "Valid passport",
+          "Proof of funds",
+          "Photos",
+          "Medical/police checks (if required)"
+        ],
+        "processing_time": "Varies by stream.",
+        "fees": "Work permit fee + biometrics.",
+        "official_link_label": "Work in Canada",
+        "official_link_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada.html"
+      }
+    ],
+    "pr_info": {
+      "overview": "Canadian PR is mainly via Express Entry, Provincial Nominee Programs, or family sponsorship.",
+      "main_pathways": [
+        "Express Entry (FSW, CEC, FST)",
+        "Provincial Nominee Programs (PNP)",
+        "Family sponsorship",
+        "Atlantic Immigration Program, etc."
+      ],
+      "typical_requirements": [
+        "Language test (IELTS/CELPIP)",
+        "Educational credential assessment",
+        "Work experience",
+        "Proof of funds (for some programs)"
+      ],
+      "processing_time": "Often 6–12 months for Express Entry.",
+      "official_link_label": "Canadian PR",
+      "official_link_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada.html"
+    }
+  },
+  {
+    "country_name": "Australia",
+    "visa_free": 0,
+    "visa_on_arrival": 0,
+    "eta": 1,
+    "visa_required": 0,
+    "passport_rank": 6,
+    "visa_categories": [
+      {
+        "id": "eviza",
+        "label": "Visitor visa / eVisitor / ETA",
+        "type": "eta",
+        "overview": "Short stays for tourism or business; multiple subclasses available.",
+        "steps": [
+          "Check eligible visa subclass.",
+          "Apply online.",
+          "Pay fee.",
+          "Wait for grant."
+        ],
+        "checklist": [
+          "Valid passport",
+          "Travel plans",
+          "Proof of funds",
+          "Health/character requirements (if asked)"
+        ],
+        "processing_time": "Often within days to a few weeks.",
+        "fees": "Varies by subclass; some are free.",
+        "base_fee_usd": 150,
+        "service_fee_usd": 0,
+        "biometrics_fee_usd": 0,
+        "official_link_label": "Visit Australia",
+        "official_link_url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visitor"
+      },
+      {
+        "id": "study",
+        "label": "Student visa (subclass 500)",
+        "type": "visa_required",
+        "overview": "For full‑time study at an Australian institution.",
+        "steps": [
+          "Get offer and Confirmation of Enrolment (CoE).",
+          "Apply online for subclass 500.",
+          "Pay fee and provide documents.",
+          "Wait for decision."
+        ],
+        "checklist": [
+          "CoE",
+          "Valid passport",
+          "OSHC (health insurance)",
+          "Proof of funds",
+          "Genuine Temporary Entrant statement",
+          "English test results (if required)"
+        ],
+        "processing_time": "Weeks to months.",
+        "fees": "Base application charge applies.",
+        "base_fee_usd": 600,
+        "service_fee_usd": 0,
+        "biometrics_fee_usd": 0,
+        "official_link_label": "Study in Australia",
+        "official_link_url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/study"
+      },
+      {
+        "id": "work",
+        "label": "Temporary Skill Shortage visa (subclass 482)",
+        "type": "visa_required",
+        "overview": "For skilled workers sponsored by an approved employer.",
+        "steps": [
+          "Employer sponsors you.",
+          "Apply for visa.",
+          "Provide skills, health, character documents.",
+          "Wait for decision."
+        ],
+        "checklist": [
+          "Sponsorship/nomination details",
+          "Valid passport",
+          "Skills assessment (if required)",
+          "Health and character checks",
+          "English test results"
+        ],
+        "processing_time": "Varies by stream.",
+        "fees": "Multiple visa application charges.",
+        "official_link_label": "Work Visas Australia",
+        "official_link_url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/work"
+      }
+    ],
+    "pr_info": {
+      "overview": "Australian PR via points‑tested skilled visas, employer sponsorship, or family streams.",
+      "main_pathways": [
+        "Skilled Independent (189)",
+        "Skilled Nominated (190)",
+        "Regional visas leading to PR",
+        "Employer nomination"
+      ],
+      "typical_requirements": [
+        "Positive skills assessment",
+        "English test",
+        "Points test threshold",
+        "Health and character checks"
+      ],
+      "processing_time": "Often many months.",
+      "official_link_label": "Australian PR",
+      "official_link_url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/permanent-residence"
+    }
+  },
+  {
+    "country_name": "Germany",
+    "visa_free": 0,
+    "visa_on_arrival": 0,
+    "eta": 0,
+    "visa_required": 1,
+    "passport_rank": 3,
+    "visa_categories": [
+      {
+        "id": "tourist",
+        "label": "Schengen short‑stay visa (Type C)",
+        "type": "visa_required",
+        "overview": "For tourism, business trips, or visiting family/friends up to 90 days in 180 days.",
+        "steps": [
+          "Book appointment at German embassy/consulate or visa centre.",
+          "Complete visa application form.",
+          "Gather documents and travel insurance.",
+          "Attend appointment and give biometrics.",
+          "Wait for decision."
+        ],
+        "checklist": [
+          "Valid passport",
+          "Application form",
+          "Photos",
+          "Travel medical insurance",
+          "Flight and accommodation proof",
+          "Proof of funds",
+          "Cover letter",
+          "Invitation letter (if applicable)"
+        ],
+        "processing_time": "Commonly 10–15 calendar days.",
+        "fees": "Schengen visa fee; check current amount.",
+        "base_fee_usd": 90,
+        "service_fee_usd": 0,
+        "biometrics_fee_usd": 0,
+        "official_link_label": "Germany Visas",
+        "official_link_url": "https://www.germany.info/visa"
+      },
+      {
+        "id": "study",
+        "label": "National visa for study (Type D)",
+        "type": "visa_required",
+        "overview": "For long‑term study programmes in Germany.",
+        "steps": [
+          "Secure university admission.",
+          "Prepare financial proof (blocked account, scholarship).",
+          "Book visa appointment.",
+          "Submit application and documents.",
+          "Wait for decision."
+        ],
+        "checklist": [
+          "Admission letter",
+          "Valid passport",
+          "Financial proof",
+          "Health insurance",
+          "Application forms",
+          "Photos",
+          "CV and motivation letter"
+        ],
+        "processing_time": "Several weeks; apply early.",
+        "fees": "National visa fee.",
+        "base_fee_usd": 80,
+        "service_fee_usd": 0,
+        "biometrics_fee_usd": 0,
+        "official_link_label": "Study in Germany",
+        "official_link_url": "https://www.study-in-germany.de"
+      },
+      {
+        "id": "work",
+        "label": "Employment visa / EU Blue Card",
+        "type": "visa_required",
+        "overview": "For skilled workers with a job offer in Germany.",
+        "steps": [
+          "Get job offer.",
+          "Check recognition of qualifications.",
+          "Apply for employment visa or Blue Card.",
+          "Submit documents and attend appointment.",
+          "Wait for decision."
+        ],
+        "checklist": [
+          "Employment contract",
+          "Valid passport",
+          "Qualification certificates",
+          "CV",
+          "Health insurance",
+          "Application forms"
+        ],
+        "processing_time": "Several weeks.",
+        "fees": "National visa fee.",
+        "official_link_label": "Work in Germany",
+        "official_link_url": "https://www.make-it-in-germany.com"
+      }
+    ],
+    "pr_info": {
+      "overview": "Long‑term residence (Niederlassungserlaubnis) after several years of lawful residence.",
+      "main_pathways": [
+        "After 5 years of lawful residence (standard)",
+        "EU Blue Card holders (faster under conditions)",
+        "Graduates of German universities"
+      ],
+      "typical_requirements": [
+        "Secure livelihood",
+        "Pension contributions",
+        "German language skills",
+        "Adequate living space"
+      ],
+      "processing_time": "Several months.",
+      "official_link_label": "German Settlement Permit",
+      "official_link_url": "https://www.bamf.de"
+    }
+  },
+  {
+    "country_name": "Switzerland",
+    "visa_free": 0,
+    "visa_on_arrival": 0,
+    "eta": 0,
+    "visa_required": 1,
+    "passport_rank": 5,
+    "visa_categories": [
+      {
+        "id": "tourist",
+        "label": "Schengen short‑stay visa (Type C)",
+        "type": "visa_required",
+        "overview": "For tourism, business, or visiting family/friends up to 90 days in 180 days.",
+        "steps": [
+          "Book appointment at Swiss embassy/consulate or visa centre.",
+          "Complete application form.",
+          "Gather documents and insurance.",
+          "Attend appointment and give biometrics.",
+          "Wait for decision."
+        ],
+        "checklist": [
+          "Valid passport",
+          "Application form",
+          "Photos",
+          "Travel insurance",
+          "Flight and accommodation proof",
+          "Proof of funds",
+          "Cover letter",
+          "Invitation letter (if applicable)"
+        ],
+        "processing_time": "Around 10–15 days typical.",
+        "fees": "Schengen visa fee.",
+        "base_fee_usd": 90,
+        "service_fee_usd": 0,
+        "biometrics_fee_usd": 0,
+        "official_link_label": "Swiss Visas",
+        "official_link_url": "https://www.eda.admin.ch/visa"
+      },
+      {
+        "id": "study",
+        "label": "National visa for study (Type D)",
+        "type": "visa_required",
+        "overview": "For long‑term study in Switzerland.",
+        "steps": [
+          "Get university admission.",
+          "Prepare financial proof.",
+          "Apply for national visa at Swiss representation.",
+          "Submit documents and wait."
+        ],
+        "checklist": [
+          "Admission letter",
+          "Valid passport",
+          "Financial proof",
+          "Health insurance",
+          "Application forms",
+          "Photos"
+        ],
+        "processing_time": "Several weeks to months.",
+        "fees": "National visa fee.",
+        "official_link_label": "Study in Switzerland",
+        "official_link_url": "https://www.studyinswitzerland.ch"
+      },
+      {
+        "id": "work",
+        "label": "Work permit / employment visa",
+        "type": "visa_required",
+        "overview": "For employed persons; quotas and conditions apply.",
+        "steps": [
+          "Get job offer.",
+          "Employer applies for work permit.",
+          "Apply for visa if required.",
+          "Submit documents."
+        ],
+        "checklist": [
+          "Employment contract",
+          "Valid passport",
+          "Qualifications",
+          "CV",
+          "Permit approval documents"
+        ],
+        "processing_time": "Varies by canton and permit type.",
+        "fees": "Visa/permit fees vary.",
+        "official_link_label": "Work in Switzerland",
+        "official_link_url": "https://www.sem.admin.ch"
+      }
+    ],
+    "pr_info": {
+      "overview": "C and L permits lead to long‑term residence under conditions.",
+      "main_pathways": [
+        "C permit (settlement) after 5–10 years",
+        "B permit (residence) as intermediate step"
+      ],
+      "typical_requirements": [
+        "Continuous residence",
+        "Integration",
+        "Language skills",
+        "No serious criminal record"
+      ],
+      "processing_time": "Several months.",
+      "official_link_label": "Swiss Residence Permits",
+      "official_link_url": "https://www.sem.admin.ch"
+    }
+  },
+  {
+    "country_name": "France",
+    "visa_free": 0,
+    "visa_on_arrival": 0,
+    "eta": 0,
+    "visa_required": 1,
+    "passport_rank": 2,
+    "visa_categories": [
+      {
+        "id": "tourist",
+        "label": "Schengen short‑stay visa (Type C)",
+        "type": "visa_required",
+        "overview": "For tourism, business, or visiting family/friends up to 90 days in 180 days.",
+        "steps": [
+          "Book appointment at French embassy/consulate or visa centre.",
+          "Complete application form.",
+          "Gather documents and insurance.",
+          "Attend appointment and give biometrics.",
+          "Wait for decision."
+        ],
+        "checklist": [
+          "Valid passport",
+          "Application form",
+          "Photos",
+          "Travel insurance",
+          "Flight and accommodation proof",
+          "Proof of funds",
+          "Cover letter",
+          "Invitation letter (if applicable)"
+        ],
+        "processing_time": "Around 10–15 days typical.",
+        "fees": "Schengen visa fee.",
+        "base_fee_usd": 90,
+        "service_fee_usd": 0,
+        "biometrics_fee_usd": 0,
+        "official_link_label": "France Visas",
+        "official_link_url": "https://france-visas.gouv.fr"
+      },
+      {
+        "id": "study",
+        "label": "Long‑stay student visa",
+        "type": "visa_required",
+        "overview": "For studies longer than 90 days in France.",
+        "steps": [
+          "Get admission.",
+          "Apply via Campus France (if applicable) and consulate.",
+          "Submit documents and attend appointment.",
+          "Wait for decision."
+        ],
+        "checklist": [
+          "Admission letter",
+          "Valid passport",
+          "Financial proof",
+          "Accommodation proof",
+          "Application forms",
+          "Photos"
+        ],
+        "processing_time": "Several weeks.",
+        "fees": "Long‑stay visa fee.",
+        "official_link_label": "Study in France",
+        "official_link_url": "https://www.campusfrance.org"
+      },
+      {
+        "id": "work",
+        "label": "Work visa / Talent Passport",
+        "type": "visa_required",
+        "overview": "For employed or self‑employed skilled workers.",
+        "steps": [
+          "Get job offer or project.",
+          "Apply for appropriate work visa category.",
+          "Submit documents.",
+          "Wait for decision."
+        ],
+        "checklist": [
+          "Employment contract or business plan",
+          "Valid passport",
+          "Qualifications",
+          "CV",
+          "Financial proof"
+        ],
+        "processing_time": "Several weeks.",
+        "fees": "Visa fee varies by category.",
+        "official_link_label": "Work in France",
+        "official_link_url": "https://www.service-public.fr"
+      }
+    ],
+    "pr_info": {
+      "overview": "Long‑term residence card (carte de résident) after several years.",
+      "main_pathways": [
+        "After 5 years of lawful residence",
+        "Certain talent passports and specific categories"
+      ],
+      "typical_requirements": [
+        "Continuous residence",
+        "Integration",
+        "Language skills",
+        "Stable resources"
+      ],
+      "processing_time": "Several months.",
+      "official_link_label": "French Residence",
+      "official_link_url": "https://www.service-public.fr"
+    }
+  },
+  {
+    "country_name": "Ireland",
+    "visa_free": 0,
+    "visa_on_arrival": 0,
+    "eta": 0,
+    "visa_required": 1,
+    "passport_rank": 8,
+    "visa_categories": [
+      {
+        "id": "tourist",
+        "label": "Short‑stay 'C' visa",
+        "type": "visa_required",
+        "overview": "For tourism, visiting family/friends, short courses.",
+        "steps": [
+          "Complete online application.",
+          "Pay fee and book appointment.",
+          "Submit documents and give biometrics.",
+          "Wait for decision."
+        ],
+        "checklist": [
+          "Valid passport",
+          "Application form",
+          "Photos",
+          "Travel itinerary",
+          "Proof of funds",
+          "Accommodation details",
+          "Letter of invitation (if applicable)"
+        ],
+        "processing_time": "Several weeks.",
+        "fees": "Short‑stay visa fee.",
+        "base_fee_usd": 70,
+        "service_fee_usd": 0,
+        "biometrics_fee_usd": 0,
+        "official_link_label": "Ireland Visas",
+        "official_link_url": "https://www.irishimmigration.ie"
+      },
+      {
+        "id": "study",
+        "label": "Study visa",
+        "type": "visa_required",
+        "overview": "For courses longer than 90 days.",
+        "steps": [
+          "Get acceptance from recognized institution.",
+          "Apply online for study visa.",
+          "Pay fee and submit documents.",
+          "Wait for decision."
+        ],
+        "checklist": [
+          "Acceptance letter",
+          "Valid passport",
+          "Proof of fees payment",
+          "Proof of funds",
+          "Medical insurance",
+          "Photos"
+        ],
+        "processing_time": "Several weeks.",
+        "fees": "Study visa fee.",
+        "official_link_label": "Study in Ireland",
+        "official_link_url": "https://www.irishimmigration.ie/study"
+      },
+      {
+        "id": "work",
+        "label": "Employment permit + visa",
+        "type": "visa_required",
+        "overview": "Most non‑EEA workers need an employment permit and possibly a visa.",
+        "steps": [
+          "Get job offer.",
+          "Employer applies for employment permit.",
+          "Apply for entry visa if required.",
+          "Register with immigration on arrival."
+        ],
+        "checklist": [
+          "Employment permit",
+          "Valid passport",
+          "Job offer letter",
+          "Proof of qualifications",
+          "Photos"
+        ],
+        "processing_time": "Permit + visa stages; several weeks to months.",
+        "fees": "Permit fee + visa fee.",
+        "official_link_label": "Work in Ireland",
+        "official_link_url": "https://www.irishimmigration.ie/work"
+      }
+    ],
+    "pr_info": {
+      "overview": "Long Term Residence after 5 years of lawful residence on certain permits.",
+      "main_pathways": [
+        "After 5 years on Critical Skills or General Employment Permit",
+        "Family reunification routes"
+      ],
+      "typical_requirements": [
+        "Continuous lawful residence",
+        "Employment history",
+        "No serious criminal record"
+      ],
+      "processing_time": "Several months.",
+      "official_link_label": "Irish Long Term Residence",
+      "official_link_url": "https://www.irishimmigration.ie"
+    }
+  },
+  {
+    "country_name": "Finland",
+    "visa_free": 0,
+    "visa_on_arrival": 0,
+    "eta": 0,
+    "visa_required": 1,
+    "passport_rank": 1,
+    "visa_categories": [
+      {
+        "id": "tourist",
+        "label": "Schengen short‑stay visa (Type C)",
+        "type": "visa_required",
+        "overview": "For tourism, business, or visiting family/friends up to 90 days in 180 days.",
+        "steps": [
+          "Book appointment at Finnish embassy/visa centre.",
+          "Complete application form.",
+          "Gather documents and insurance.",
+          "Attend appointment and give biometrics.",
+          "Wait for decision."
+        ],
+        "checklist": [
+          "Valid passport",
+          "Application form",
+          "Photos",
+          "Travel insurance",
+          "Flight and accommodation proof",
+          "Proof of funds",
+          "Cover letter",
+          "Invitation letter (if applicable)"
+        ],
+        "processing_time": "Around 10–15 days typical.",
+        "fees": "Schengen visa fee.",
+        "base_fee_usd": 90,
+        "service_fee_usd": 0,
+        "biometrics_fee_usd": 0,
+        "official_link_label": "Finland Visas",
+        "official_link_url": "https://migri.fi/visas"
+      },
+      {
+        "id": "study",
+        "label": "Residence permit for studies",
+        "type": "visa_required",
+        "overview": "For degree studies in Finland.",
+        "steps": [
+          "Get admission.",
+          "Apply for residence permit online.",
+          "Prove funds and insurance.",
+          "Visit service point for ID.",
+          "Wait for decision."
+        ],
+        "checklist": [
+          "Admission letter",
+          "Valid passport",
+          "Proof of funds",
+          "Health insurance",
+          "Application form",
+          "Photos"
+        ],
+        "processing_time": "1–3 months typical.",
+        "fees": "Residence permit fee.",
+        "official_link_label": "Study in Finland",
+        "official_link_url": "https://studyinfinland.fi"
+      },
+      {
+        "id": "work",
+        "label": "Residence permit for work",
+        "type": "visa_required",
+        "overview": "For employed or self‑employed persons.",
+        "steps": [
+          "Get job offer or plan self‑employment.",
+          "Apply for residence permit for work.",
+          "Submit contract and documents.",
+          "Wait for decision."
+        ],
+        "checklist": [
+          "Employment contract",
+          "Valid passport",
+          "Qualifications",
+          "CV",
+          "Application form"
+        ],
+        "processing_time": "Several weeks to months.",
+        "fees": "Residence permit fee.",
+        "official_link_label": "Work in Finland",
+        "official_link_url": "https://migri.fi/work"
+      }
+    ],
+    "pr_info": {
+      "overview": "Permanent residence after 4 years of continuous residence (A permit).",
+      "main_pathways": [
+        "After 4 years on continuous residence permit",
+        "Certain researchers and specialists"
+      ],
+      "typical_requirements": [
+        "Continuous residence",
+        "No serious criminal record",
+        "Means of support"
+      ],
+      "processing_time": "Several months.",
+      "official_link_label": "Finnish Permanent Residence",
+      "official_link_url": "https://migri.fi"
+    }
+  },
+  {
+    "country_name": "Norway",
+    "visa_free": 0,
+    "visa_on_arrival": 0,
+    "eta": 0,
+    "visa_required": 1,
+    "passport_rank": 10,
+    "visa_categories": [
+      {
+        "id": "tourist",
+        "label": "Schengen short‑stay visa (Type C)",
+        "type": "visa_required",
+        "overview": "For tourism, business, or visiting family/friends up to 90 days in 180 days.",
+        "steps": [
+          "Book appointment at Norwegian embassy/visa centre.",
+          "Complete application form.",
+          "Gather documents and insurance.",
+          "Attend appointment and give biometrics.",
+          "Wait for decision."
+        ],
+        "checklist": [
+          "Valid passport",
+          "Application form",
+          "Photos",
+          "Travel insurance",
+          "Flight and accommodation proof",
+          "Proof of funds",
+          "Cover letter",
+          "Invitation letter (if applicable)"
+        ],
+        "processing_time": "Around 10–15 days typical.",
+        "fees": "Schengen visa fee.",
+        "base_fee_usd": 90,
+        "service_fee_usd": 0,
+        "biometrics_fee_usd": 0,
+        "official_link_label": "Norway Visas",
+        "official_link_url": "https://www.udi.no/visas"
+      },
+      {
+        "id": "study",
+        "label": "Residence permit for studies",
+        "type": "visa_required",
+        "overview": "For full‑time studies at approved institutions.",
+        "steps": [
+          "Get admission.",
+          "Apply online for residence permit.",
+          "Prove funds and accommodation.",
+          "Wait for decision."
+        ],
+        "checklist": [
+          "Admission letter",
+          "Valid passport",
+          "Proof of funds",
+          "Accommodation proof",
+          "Application form",
+          "Photos"
+        ],
+        "processing_time": "Several weeks to months.",
+        "fees": "Residence permit fee.",
+        "official_link_label": "Study in Norway",
+        "official_link_url": "https://studyinnorway.no"
+      },
+      {
+        "id": "work",
+        "label": "Residence permit for work",
+        "type": "visa_required",
+        "overview": "For skilled workers, seasonal workers, etc.",
+        "steps": [
+          "Get job offer.",
+          "Apply for residence permit for work.",
+          "Submit contract and documents.",
+          "Wait for decision."
+        ],
+        "checklist": [
+          "Employment contract",
+          "Valid passport",
+          "Qualifications",
+          "CV",
+          "Application form"
+        ],
+        "processing_time": "Several weeks to months.",
+        "fees": "Residence permit fee.",
+        "official_link_label": "Work in Norway",
+        "official_link_url": "https://www.udi.no/work"
+      }
+    ],
+    "pr_info": {
+      "overview": "Permanent residence after 3–5 years of lawful residence depending on permit type.",
+      "main_pathways": [
+        "After 3 years for some skilled workers",
+        "After 5 years for others",
+        "Family immigration routes"
+      ],
+      "typical_requirements": [
+        "Continuous residence",
+        "Language requirements (for some)",
+        "No serious criminal record",
+        "Means of support"
+      ],
+      "processing_time": "Several months.",
+      "official_link_label": "Norwegian Permanent Residence",
+      "official_link_url": "https://www.udi.no"
+    }
+  },
+  {
+    "country_name": "Pakistan",
+    "visa_free": 0,
+    "visa_on_arrival": 0,
+    "eta": 0,
+    "visa_required": 1,
+    "passport_rank": 109,
+    "visa_categories": [
+      {
+        "id": "tourist",
+        "label": "Tourist visa",
+        "type": "visa_required",
+        "overview": "For foreign nationals visiting Pakistan for tourism.",
+        "steps": [
+          "Check eligibility for e‑visa or regular visa.",
+          "Complete online application via official visa portal.",
+          "Pay visa fee.",
+          "Submit required documents and attend interview/biometrics if requested.",
+          "Receive visa decision and travel."
+        ],
+        "checklist": [
+          "Valid passport",
+          "Completed visa application form",
+          "Passport‑size photographs",
+          "Travel itinerary",
+          "Hotel booking or invitation letter",
+          "Proof of funds",
+          "Return ticket (recommended)"
+        ],
+        "processing_time": "Varies; e‑visa often faster than regular visa.",
+        "fees": "Depends on nationality and visa type; check official portal.",
+        "base_fee_usd": 50,
+        "service_fee_usd": 0,
+        "biometrics_fee_usd": 0,
+        "official_link_label": "Pakistan Online Visa",
+        "official_link_url": "https://visa.nadra.gov.pk"
+      },
+      {
+        "id": "study",
+        "label": "Student visa",
+        "type": "visa_required",
+        "overview": "For international students enrolled in Pakistani institutions.",
+        "steps": [
+          "Obtain admission/acceptance letter.",
+          "Apply for student visa via embassy/consulate or designated portal.",
+          "Submit required documents.",
+          "Attend interview if required.",
+          "Receive visa and travel."
+        ],
+        "checklist": [
+          "Valid passport",
+          "Admission/acceptance letter",
+          "Completed visa application form",
+          "Passport photos",
+          "Proof of funds or scholarship",
+          "Medical certificate (if required)",
+          "Police clearance (if required)"
+        ],
+        "processing_time": "Several weeks; apply well in advance.",
+        "fees": "As per embassy/official rules.",
+        "official_link_label": "Study in Pakistan",
+        "official_link_url": "https://www.mofa.gov.pk"
+      },
+      {
+        "id": "work",
+        "label": "Work visa",
+        "type": "visa_required",
+        "overview": "For foreign nationals employed in Pakistan.",
+        "steps": [
+          "Get job offer and NOC/employment approval.",
+          "Apply for work visa at embassy/consulate.",
+          "Submit contract and supporting documents.",
+          "Wait for decision."
+        ],
+        "checklist": [
+          "Employment contract",
+          "Valid passport",
+          "NOC/approval from relevant authority",
+          "Photos",
+          "Application form"
+        ],
+        "processing_time": "Several weeks.",
+        "fees": "As per embassy/official rules.",
+        "official_link_label": "Work in Pakistan",
+        "official_link_url": "https://www.mofa.gov.pk"
+      }
+    ],
+    "pr_info": {
+      "overview": "Pakistan offers long‑term residence options for certain categories (investors, spouses, etc.).",
+      "main_pathways": [
+        "Spouse of Pakistani citizen",
+        "Investor/business categories",
+        "Special permission cases"
+      ],
+      "typical_requirements": [
+        "Valid passport",
+        "Proof of relationship or investment",
+        "Police clearance",
+        "Medical fitness"
+      ],
+      "official_link_label": "Pakistan Immigration",
+      "official_link_url": "https://www.mofa.gov.pk"
+    }
+  },
+  {
+    "country_name": "India",
+    "visa_free": 0,
+    "visa_on_arrival": 0,
+    "eta": 1,
+    "visa_required": 0,
+    "passport_rank": 85,
+    "visa_categories": [
+      {
+        "id": "eviza",
+        "label": "e‑Visa (tourist/business/medical)",
+        "type": "eta",
+        "overview": "Online visa for short stays for tourism, business, or medical purposes.",
+        "steps": [
+          "Apply online on the official e‑Visa portal.",
+          "Upload documents and photo.",
+          "Pay fee.",
+          "Receive e‑Visa by email."
+        ],
+        "checklist": [
+          "Valid passport",
+          "Recent photograph",
+          "Travel details",
+          "Email address",
+          "Payment method"
+        ],
+        "processing_time": "Usually a few days.",
+        "fees": "Varies by nationality and duration.",
+        "base_fee_usd": 25,
+        "service_fee_usd": 0,
+        "biometrics_fee_usd": 0,
+        "official_link_label": "India e‑Visa",
+        "official_link_url": "https://indianvisaonline.gov.in"
+      },
+      {
+        "id": "study",
+        "label": "Student visa",
+        "type": "visa_required",
+        "overview": "For enrolled students at recognized Indian institutions.",
+        "steps": [
+          "Get admission.",
+          "Apply for student visa at Indian mission/FRRO.",
+          "Submit documents.",
+          "Wait for decision."
+        ],
+        "checklist": [
+          "Admission letter",
+          "Valid passport",
+          "Photos",
+          "Proof of funds",
+          "Application form"
+        ],
+        "processing_time": "Several weeks.",
+        "fees": "As per mission rules.",
+        "official_link_label": "Study in India",
+        "official_link_url": "https://studyinindia.gov.in"
+      },
+      {
+        "id": "work",
+        "label": "Employment visa",
+        "type": "visa_required",
+        "overview": "For skilled professionals employed in India.",
+        "steps": [
+          "Get job offer.",
+          "Apply for employment visa.",
+          "Submit contract and documents.",
+          "Register with FRRO on arrival."
+        ],
+        "checklist": [
+          "Employment contract",
+          "Valid passport",
+          "Qualifications",
+          "Photos",
+          "Application form"
+        ],
+        "processing_time": "Several weeks.",
+        "fees": "As per mission rules.",
+        "official_link_label": "Work in India",
+        "official_link_url": "https://boi.gov.in"
+      }
+    ],
+    "pr_info": {
+      "overview": "India does not offer classic PR; long‑term stay via employment/residence permits and OCI for eligible persons.",
+      "main_pathways": [
+        "Long‑term employment visas",
+        "OCI card for persons of Indian origin",
+        "Residence permits for specific categories"
+      ],
+      "typical_requirements": [
+        "Valid passport",
+        "Proof of employment or origin",
+        "Police clearance",
+        "Medical fitness"
+      ],
+      "official_link_label": "OCI & Long‑Term Visas",
+      "official_link_url": "https://boi.gov.in"
+    }
+  },
+  {
+    "country_name": "Bangladesh",
+    "visa_free": 0,
+    "visa_on_arrival": 0,
+    "eta": 0,
+    "visa_required": 1,
+    "passport_rank": 100,
+    "visa_categories": [
+      {
+        "id": "tourist",
+        "label": "Tourist visa",
+        "type": "visa_required",
+        "overview": "For foreign nationals visiting Bangladesh for tourism.",
+        "steps": [
+          "Apply at Bangladesh mission or via e‑Visa if eligible.",
+          "Submit documents and fee.",
+          "Wait for decision."
+        ],
+        "checklist": [
+          "Valid passport",
+          "Application form",
+          "Photos",
+          "Travel itinerary",
+          "Hotel booking or invitation",
+          "Proof of funds"
+        ],
+        "processing_time": "Several days to weeks.",
+        "fees": "Varies by nationality and entry type.",
+        "base_fee_usd": 50,
+        "service_fee_usd": 0,
+        "biometrics_fee_usd": 0,
+        "official_link_label": "Bangladesh Visa",
+        "official_link_url": "https://www.mofa.gov.bd"
+      },
+      {
+        "id": "study",
+        "label": "Student visa",
+        "type": "visa_required",
+        "overview": "For enrolled students at Bangladeshi institutions.",
+        "steps": [
+          "Get admission.",
+          "Apply for student visa.",
+          "Submit documents.",
+          "Wait for decision."
+        ],
+        "checklist": [
+          "Admission letter",
+          "Valid passport",
+          "Photos",
+          "Proof of funds",
+          "Application form"
+        ],
+        "processing_time": "Several weeks.",
+        "fees": "As per mission rules.",
+        "official_link_label": "Study in Bangladesh",
+        "official_link_url": "https://www.mofa.gov.bd"
+      },
+      {
+        "id": "work",
+        "label": "Work visa",
+        "type": "visa_required",
+        "overview": "For foreign nationals employed in Bangladesh.",
+        "steps": [
+          "Get job offer and work permit approval.",
+          "Apply for work visa.",
+          "Submit contract and documents.",
+          "Wait for decision."
+        ],
+        "checklist": [
+          "Employment contract",
+          "Work permit approval",
+          "Valid passport",
+          "Photos",
+          "Application form"
+        ],
+        "processing_time": "Several weeks.",
+        "fees": "As per mission rules.",
+        "official_link_label": "Work in Bangladesh",
+        "official_link_url": "https://www.mofa.gov.bd"
+      }
+    ],
+    "pr_info": {
+      "overview": "Bangladesh offers long‑term residence for certain categories (spouses, investors, etc.).",
+      "main_pathways": [
+        "Spouse of Bangladeshi citizen",
+        "Investor/business categories",
+        "Special permission cases"
+      ],
+      "typical_requirements": [
+        "Valid passport",
+        "Proof of relationship or investment",
+        "Police clearance",
+        "Medical fitness"
+      ],
+      "official_link_label": "Bangladesh Immigration",
+      "official_link_url": "https://www.mofa.gov.bd"
+    }
+  },
+  {
+    "country_name": "Saudi Arabia",
+    "visa_free": 0,
+    "visa_on_arrival": 0,
+    "eta": 0,
+    "visa_required": 1,
+    "passport_rank": 72,
+    "visa_categories": [
+      {
+        "id": "eviza",
+        "label": "Tourist e‑visa / visa on arrival",
+        "type": "eta",
+        "overview": "For tourism and Umrah (outside Hajj season) for eligible nationalities.",
+        "steps": [
+          "Check eligibility for e‑visa or visa on arrival.",
+          "Apply online via official Saudi e‑visa portal or obtain visa on arrival if eligible.",
+          "Pay the visa fee.",
+          "Receive e‑visa or entry stamp.",
+          "Travel with visa and supporting documents."
+        ],
+        "checklist": [
+          "Passport valid for at least 6 months",
+          "Recent photograph",
+          "Valid email address (for e‑visa)",
+          "Payment method for visa fee",
+          "Accommodation details in Saudi Arabia",
+          "Return ticket (recommended)"
+        ],
+        "processing_time": "E‑visa often within minutes to a few days.",
+        "fees": "E‑visa/visa on arrival fee plus insurance; check official portal.",
+        "base_fee_usd": 120,
+        "service_fee_usd": 0,
+        "biometrics_fee_usd": 0,
+        "official_link_label": "Saudi e‑Visa",
+        "official_link_url": "https://visa.visitsaudi.com"
+      },
+      {
+        "id": "study",
+        "label": "Student visa",
+        "type": "visa_required",
+        "overview": "For studying at Saudi universities and institutions.",
+        "steps": [
+          "Gain admission to a Saudi educational institution.",
+          "Institution initiates visa process with relevant authorities.",
+          "Complete medical tests and provide required documents.",
+          "Receive visa authorization and stamping.",
+          "Travel after visa issuance."
+        ],
+        "checklist": [
+          "Valid passport",
+          "Admission/acceptance letter",
+          "Medical fitness certificate",
+          "Passport‑size photographs",
+          "Completed visa forms",
+          "Police clearance (if required)",
+          "Proof of funds or scholarship letter"
+        ],
+        "processing_time": "Several weeks; depends on institution and authorities.",
+        "fees": "Fees vary; often handled via institution.",
+        "official_link_label": "Study in Saudi Arabia",
+        "official_link_url": "https://www.mofa.gov.sa"
+      },
+      {
+        "id": "work",
+        "label": "Work visa",
+        "type": "visa_required",
+        "overview": "For foreign workers sponsored by Saudi employers.",
+        "steps": [
+          "Get job offer and work permit.",
+          "Employer initiates visa process.",
+          "Complete medical tests.",
+          "Receive visa stamping.",
+          "Travel after visa issuance."
+        ],
+        "checklist": [
+          "Employment contract",
+          "Valid passport",
+          "Medical fitness certificate",
+          "Photos",
+          "Visa authorization"
+        ],
+        "processing_time": "Several weeks.",
+        "fees": "Handled via employer/sponsor.",
+        "official_link_label": "Work in Saudi Arabia",
+        "official_link_url": "https://www.mol.gov.sa"
+      }
+    ],
+    "pr_info": {
+      "overview": "Saudi residency via employment (Iqama) and premium residency options.",
+      "main_pathways": [
+        "Employment‑based Iqama",
+        "Premium Residency (for investors, specialists, etc.)"
+      ],
+      "typical_requirements": [
+        "Valid employment contract",
+        "Medical fitness",
+        "Police clearance",
+        "Financial requirements for premium residency"
+      ],
+      "official_link_label": "Saudi Residency",
+      "official_link_url": "https://www.premiumresidency.sa"
+    }
+  },
+  {
+    "country_name": "United Arab Emirates",
+    "visa_free": 0,
+    "visa_on_arrival": 0,
+    "eta": 1,
+    "visa_required": 0,
+    "passport_rank": 15,
+    "visa_categories": [
+      {
+        "id": "eviza",
+        "label": "Tourist e‑visa / visa on arrival",
+        "type": "eta",
+        "overview": "Short‑stay tourist visas; many nationalities eligible for e‑visa or visa on arrival.",
+        "steps": [
+          "Check eligibility.",
+          "Apply online or obtain visa on arrival.",
+          "Pay fee.",
+          "Receive visa."
+        ],
+        "checklist": [
+          "Valid passport",
+          "Photo",
+          "Travel details",
+          "Payment method"
+        ],
+        "processing_time": "Often within days.",
+        "fees": "Varies by duration and type.",
+        "base_fee_usd": 100,
+        "service_fee_usd": 0,
+        "biometrics_fee_usd": 0,
+        "official_link_label": "UAE Visas",
+        "official_link_url": "https://u.ae/en/information-and-services/visa-and-emirates-id"
+      },
+      {
+        "id": "study",
+        "label": "Student visa",
+        "type": "visa_required",
+        "overview": "For enrolled students at UAE institutions.",
+        "steps": [
+          "Get admission.",
+          "Institution sponsors student visa.",
+          "Submit documents and medical.",
+          "Receive visa."
+        ],
+        "checklist": [
+          "Admission letter",
+          "Valid passport",
+          "Photos",
+          "Medical fitness",
+          "Proof of funds"
+        ],
+        "processing_time": "Several weeks.",
+        "fees": "Handled via institution/sponsor.",
+        "official_link_label": "Study in UAE",
+        "official_link_url": "https://www.mohesr.gov.ae"
+      },
+      {
+        "id": "work",
+        "label": "Work visa / residence permit",
+        "type": "visa_required",
+        "overview": "Employer‑sponsored work and residence visas.",
+        "steps": [
+          "Get job offer.",
+          "Employer applies for work permit and visa.",
+          "Complete medical and biometrics.",
+          "Receive residence visa."
+        ],
+        "checklist": [
+          "Employment contract",
+          "Valid passport",
+          "Photos",
+          "Medical fitness",
+          "Educational certificates"
+        ],
+        "processing_time": "Several weeks.",
+        "fees": "Handled via employer/sponsor.",
+        "official_link_label": "Work in UAE",
+        "official_link_url": "https://www.mohre.gov.ae"
+      }
+    ],
+    "pr_info": {
+      "overview": "UAE offers long‑term residence visas (Golden Visa, Green Visa) for eligible categories.",
+      "main_pathways": [
+        "Golden Visa (investors, specialists, outstanding students)",
+        "Green Visa (skilled workers, self‑employed)",
+        "Standard employment residence"
+      ],
+      "typical_requirements": [
+        "Valid passport",
+        "Proof of investment/qualification",
+        "Medical fitness",
+        "Police clearance"
+      ],
+      "official_link_label": "UAE Long‑Term Visas",
+      "official_link_url": "https://u.ae/en/information-and-services/visa-and-emirates-id"
+    }
+  },
+  {
+    "country_name": "Turkey",
+    "visa_free": 0,
+    "visa_on_arrival": 0,
+    "eta": 1,
+    "visa_required": 0,
+    "passport_rank": 52,
+    "visa_categories": [
+      {
+        "id": "eviza",
+        "label": "Tourist e‑Visa",
+        "type": "eta",
+        "overview": "For tourism and short business trips. Many nationalities can apply online.",
+        "steps": [
+          "Check eligibility on official e‑Visa website.",
+          "Complete online application.",
+          "Pay fee.",
+          "Receive e‑Visa by email."
+        ],
+        "checklist": [
+          "Passport valid at least 6 months",
+          "Email address",
+          "Payment card",
+          "Travel details"
+        ],
+        "processing_time": "Usually immediate to a few days.",
+        "fees": "e‑Visa fee varies by nationality.",
+        "base_fee_usd": 50,
+        "service_fee_usd": 0,
+        "biometrics_fee_usd": 0,
+        "official_link_label": "Turkey e‑Visa",
+        "official_link_url": "https://www.evisa.gov.tr"
+      },
+      {
+        "id": "study",
+        "label": "Student visa",
+        "type": "visa_required",
+        "overview": "For enrolled students at Turkish universities.",
+        "steps": [
+          "Get acceptance.",
+          "Apply for student visa at Turkish mission.",
+          "Submit documents.",
+          "After arrival, complete residence permit."
+        ],
+        "checklist": [
+          "Acceptance letter",
+          "Valid passport",
+          "Photos",
+          "Proof of funds",
+          "Application form"
+        ],
+        "processing_time": "Several weeks.",
+        "fees": "Visa fee as per embassy.",
+        "official_link_label": "Study in Turkey",
+        "official_link_url": "https://www.turkiyeburslari.gov.tr"
+      },
+      {
+        "id": "work",
+        "label": "Work visa / permit",
+        "type": "visa_required",
+        "overview": "For foreign workers with job offers.",
+        "steps": [
+          "Get job offer.",
+          "Employer applies for work permit.",
+          "Apply for work visa.",
+          "Complete residence procedures."
+        ],
+        "checklist": [
+          "Employment contract",
+          "Valid passport",
+          "Photos",
+          "Work permit approval",
+          "Application form"
+        ],
+        "processing_time": "Several weeks.",
+        "fees": "Visa and permit fees.",
+        "official_link_label": "Work in Turkey",
+        "official_link_url": "https://www.csgb.gov.tr"
+      }
+    ],
+    "pr_info": {
+      "overview": "Long‑term residence and citizenship by investment options.",
+      "main_pathways": [
+        "Long‑term residence permit after 8 years",
+        "Citizenship by investment (property, capital, jobs)"
+      ],
+      "typical_requirements": [
+        "Continuous residence",
+        "No threat to public order",
+        "Sufficient income",
+        "Health insurance"
+      ],
+      "official_link_label": "Turkish Residence & Citizenship",
+      "official_link_url": "https://www.goc.gov.tr"
+    }
+  },
+  {
+    "country_name": "Qatar",
+    "visa_free": 0,
+    "visa_on_arrival": 0,
+    "eta": 1,
+    "visa_required": 0,
+    "passport_rank": 55,
+    "visa_categories": [
+      {
+        "id": "eviza",
+        "label": "Tourist e‑visa / visa on arrival",
+        "type": "eta",
+        "overview": "Short‑stay tourist visas; many nationalities eligible.",
+        "steps": [
+          "Check eligibility.",
+          "Apply online or obtain visa on arrival.",
+          "Pay fee.",
+          "Receive visa."
+        ],
+        "checklist": [
+          "Valid passport",
+          "Photo",
+          "Travel details",
+          "Accommodation",
+          "Payment method"
+        ],
+        "processing_time": "Often within days.",
+        "fees": "Varies by type.",
+        "base_fee_usd": 70,
+        "service_fee_usd": 0,
+        "biometrics_fee_usd": 0,
+        "official_link_label": "Qatar Visas",
+        "official_link_url": "https://portal.moi.gov.qa"
+      },
+      {
+        "id": "study",
+        "label": "Student visa",
+        "type": "visa_required",
+        "overview": "For enrolled students at Qatari institutions.",
+        "steps": [
+          "Get admission.",
+          "Institution sponsors visa.",
+          "Submit documents and medical.",
+          "Receive visa."
+        ],
+        "checklist": [
+          "Admission letter",
+          "Valid passport",
+          "Photos",
+          "Medical fitness",
+          "Proof of funds"
+        ],
+        "processing_time": "Several weeks.",
+        "fees": "Handled via institution.",
+        "official_link_label": "Study in Qatar",
+        "official_link_url": "https://www.mohesr.gov.qa"
+      },
+      {
+        "id": "work",
+        "label": "Work visa / residence permit",
+        "type": "visa_required",
+        "overview": "Employer‑sponsored work and residence visas.",
+        "steps": [
+          "Get job offer.",
+          "Employer applies for work permit and visa.",
+          "Complete medical and biometrics.",
+          "Receive residence visa."
+        ],
+        "checklist": [
+          "Employment contract",
+          "Valid passport",
+          "Photos",
+          "Medical fitness",
+          "Certificates"
+        ],
+        "processing_time": "Several weeks.",
+        "fees": "Handled via employer.",
+        "official_link_label": "Work in Qatar",
+        "official_link_url": "https://www.adls.gov.qa"
+      }
+    ],
+    "pr_info": {
+      "overview": "Qatar offers permanent residence for certain long‑term residents and investors.",
+      "main_pathways": [
+        "Permanent residence for long‑term residents",
+        "Investor categories"
+      ],
+      "typical_requirements": [
+        "Long‑term lawful residence",
+        "Sufficient income",
+        "Good conduct",
+        "Arabic language (for some categories)"
+      ],
+      "official_link_label": "Qatar Permanent Residence",
+      "official_link_url": "https://portal.moi.gov.qa"
+    }
+  },
+  {
+    "country_name": "Italy",
+    "visa_free": 0,
+    "visa_on_arrival": 0,
+    "eta": 0,
+    "visa_required": 1,
+    "passport_rank": 11,
+    "visa_categories": [
+      {
+        "id": "tourist",
+        "label": "Schengen short‑stay visa (Type C)",
+        "type": "visa_required",
+        "overview": "For tourism, business, or visiting family/friends up to 90 days in 180 days.",
+        "steps": [
+          "Book appointment at Italian embassy/visa centre.",
+          "Complete application form.",
+          "Gather documents and insurance.",
+          "Attend appointment and give biometrics.",
+          "Wait for decision."
+        ],
+        "checklist": [
+          "Valid passport",
+          "Application form",
+          "Photos",
+          "Travel insurance",
+          "Flight and accommodation proof",
+          "Proof of funds",
+          "Cover letter",
+          "Invitation letter (if applicable)"
+        ],
+        "processing_time": "Around 10–15 days typical.",
+        "fees": "Schengen visa fee.",
+        "base_fee_usd": 90,
+        "service_fee_usd": 0,
+        "biometrics_fee_usd": 0,
+        "official_link_label": "Italy Visas",
+        "official_link_url": "https://www.esteri.it/visa"
+      },
+      {
+        "id": "study",
+        "label": "Study visa",
+        "type": "visa_required",
+        "overview": "For enrolled students at Italian institutions.",
+        "steps": [
+          "Get admission.",
+          "Apply for study visa at Italian mission.",
+          "Submit documents.",
+          "After arrival, apply for residence permit."
+        ],
+        "checklist": [
+          "Admission letter",
+          "Valid passport",
+          "Proof of funds",
+          "Accommodation proof",
+          "Application form",
+          "Photos"
+        ],
+        "processing_time": "Several weeks.",
+        "fees": "Visa fee.",
+        "official_link_label": "Study in Italy",
+        "official_link_url": "https://www.studyinitaly.esteri.it"
+      },
+      {
+        "id": "work",
+        "label": "Work visa / permit",
+        "type": "visa_required",
+        "overview": "For employed or self‑employed persons.",
+        "steps": [
+          "Get job offer or plan self‑employment.",
+          "Apply for work visa/nulla osta.",
+          "Submit documents.",
+          "After arrival, apply for residence permit."
+        ],
+        "checklist": [
+          "Employment contract or business plan",
+          "Valid passport",
+          "Qualifications",
+          "CV",
+          "Application form"
+        ],
+        "processing_time": "Several weeks to months.",
+        "fees": "Visa and permit fees.",
+        "official_link_label": "Work in Italy",
+        "official_link_url": "https://www.interno.gov.it"
+      }
+    ],
+    "pr_info": {
+      "overview": "Long‑term EU residence permit after 5 years of lawful residence.",
+      "main_pathways": [
+        "After 5 years of continuous residence",
+        "Family reasons",
+        "Asylum/humanitarian (specific cases)"
+      ],
+      "typical_requirements": [
+        "Continuous residence",
+        "Sufficient income",
+        "Adequate housing",
+        "Italian language test"
+      ],
+      "processing_time": "Several months.",
+      "official_link_label": "Italian Long‑Term Residence",
+      "official_link_url": "https://www.interno.gov.it"
+    }
+  },
+  {
+    "country_name": "China",
+    "visa_free": 0,
+    "visa_on_arrival": 0,
+    "eta": 0,
+    "visa_required": 1,
+    "passport_rank": 66,
+    "visa_categories": [
+      {
+        "id": "tourist",
+        "label": "Tourist visa (L)",
+        "type": "visa_required",
+        "overview": "For tourism and family visits.",
+        "steps": [
+          "Complete application form.",
+          "Book appointment at Chinese visa centre.",
+          "Submit documents and give biometrics.",
+          "Wait for decision."
+        ],
+        "checklist": [
+          "Valid passport",
+          "Application form",
+          "Photo",
+          "Flight and hotel bookings",
+          "Invitation letter (if applicable)",
+          "Proof of funds"
+        ],
+        "processing_time": "Around 4–5 business days typical.",
+        "fees": "Varies by nationality and service type.",
+        "base_fee_usd": 140,
+        "service_fee_usd": 0,
+        "biometrics_fee_usd": 0,
+        "official_link_label": "China Visa",
+        "official_link_url": "https://www.visaforchina.org"
+      },
+      {
+        "id": "study",
+        "label": "Student visa (X1/X2)",
+        "type": "visa_required",
+        "overview": "For enrolled students at Chinese institutions.",
+        "steps": [
+          "Get admission and JW201/JW202 form.",
+          "Apply for X visa at Chinese mission.",
+          "Submit documents.",
+          "After arrival, convert to residence permit."
+        ],
+        "checklist": [
+          "Admission letter",
+          "JW201/JW202 form",
+          "Valid passport",
+          "Photos",
+          "Application form"
+        ],
+        "processing_time": "Several weeks.",
+        "fees": "Visa fee as per mission.",
+        "official_link_label": "Study in China",
+        "official_link_url": "http://www.csc.edu.cn"
+      },
+      {
+        "id": "work",
+        "label": "Work visa (Z)",
+        "type": "visa_required",
+        "overview": "For foreign workers with job offers.",
+        "steps": [
+          "Get job offer and work permit notice.",
+          "Apply for Z visa.",
+          "After arrival, convert to residence permit.",
+          "Complete medical and registration."
+        ],
+        "checklist": [
+          "Work permit notice",
+          "Employment contract",
+          "Valid passport",
+          "Photos",
+          "Application form"
+        ],
+        "processing_time": "Several weeks.",
+        "fees": "Visa and permit fees.",
+        "official_link_label": "Work in China",
+        "official_link_url": "http://www.mohrss.gov.cn"
+      }
+    ],
+    "pr_info": {
+      "overview": "China offers permanent residence for high‑level talents, investors, and long‑term residents under strict criteria.",
+      "main_pathways": [
+        "High‑level talents and specialists",
+        "Investors",
+        "Family reunification (limited)"
+      ],
+      "typical_requirements": [
+        "Long‑term residence",
+        "Stable income",
+        "Good conduct",
+        "Health check"
+      ],
+      "official_link_label": "China Permanent Residence",
+      "official_link_url": "https://www.nia.gov.cn"
+    }
+  },
+  {
+    "country_name": "Japan",
+    "visa_free": 0,
+    "visa_on_arrival": 0,
+    "eta": 0,
+    "visa_required": 1,
+    "passport_rank": 12,
+    "visa_categories": [
+      {
+        "id": "tourist",
+        "label": "Short‑stay visa (tourism)",
+        "type": "visa_required",
+        "overview": "For tourism and short visits.",
+        "steps": [
+          "Apply at Japanese embassy/consulate or accredited agency.",
+          "Submit documents.",
+          "Wait for decision."
+        ],
+        "checklist": [
+          "Valid passport",
+          "Application form",
+          "Photo",
+          "Flight and hotel bookings",
+          "Bank statements",
+          "Letter of reason (if required)"
+        ],
+        "processing_time": "Around 5–7 business days typical.",
+        "fees": "Visa fee as per mission.",
+        "base_fee_usd": 30,
+        "service_fee_usd": 0,
+        "biometrics_fee_usd": 0,
+        "official_link_label": "Japan Visa",
+        "official_link_url": "https://www.mofa.go.jp/j_info/visit/visa"
+      },
+      {
+        "id": "study",
+        "label": "Student visa",
+        "type": "visa_required",
+        "overview": "For enrolled students at Japanese institutions.",
+        "steps": [
+          "Get admission and Certificate of Eligibility (CoE).",
+          "Apply for visa at Japanese mission.",
+          "Submit documents.",
+          "Wait for decision."
+        ],
+        "checklist": [
+          "CoE",
+          "Admission letter",
+          "Valid passport",
+          "Photos",
+          "Application form"
+        ],
+        "processing_time": "Several weeks.",
+        "fees": "Visa fee as per mission.",
+        "official_link_label": "Study in Japan",
+        "official_link_url": "https://www.studyinjapan.go.jp"
+      },
+      {
+        "id": "work",
+        "label": "Work visa",
+        "type": "visa_required",
+        "overview": "For employed professionals with sponsor.",
+        "steps": [
+          "Get job offer and CoE.",
+          "Apply for visa.",
+          "Submit documents.",
+          "Wait for decision."
+        ],
+        "checklist": [
+          "CoE",
+          "Employment contract",
+          "Valid passport",
+          "Photos",
+          "Application form"
+        ],
+        "processing_time": "Several weeks.",
+        "fees": "Visa fee as per mission.",
+        "official_link_label": "Work in Japan",
+        "official_link_url": "https://www.moj.go.jp/isa"
+      }
+    ],
+    "pr_info": {
+      "overview": "Permanent residence after long‑term lawful residence (typically 10 years, with exceptions).",
+      "main_pathways": [
+        "10 years residence (standard)",
+        "Highly Skilled Professional points route (faster)",
+        "Spouse of Japanese national/PR holder"
+      ],
+      "typical_requirements": [
+        "Long‑term continuous residence",
+        "Good conduct",
+        "Financial stability",
+        "Tax and pension compliance"
+      ],
+      "processing_time": "Several months to over a year.",
+      "official_link_label": "Japan Permanent Residence",
+      "official_link_url": "https://www.moj.go.jp/isa"
+    }
+  },
+  {
+    "country_name": "Russia",
+    "visa_free": 0,
+    "visa_on_arrival": 0,
+    "eta": 0,
+    "visa_required": 1,
+    "passport_rank": 48,
+    "visa_categories": [
+      {
+        "id": "tourist",
+        "label": "Tourist visa",
+        "type": "visa_required",
+        "overview": "For tourism and private visits.",
+        "steps": [
+          "Get invitation/tourist voucher.",
+          "Complete application form.",
+          "Submit at Russian visa centre/mission.",
+          "Give biometrics.",
+          "Wait for decision."
+        ],
+        "checklist": [
+          "Valid passport",
+          "Application form",
+          "Photo",
+          "Invitation/voucher",
+          "Travel insurance",
+          "Proof of funds"
+        ],
+        "processing_time": "Several days to weeks.",
+        "fees": "Consular + service fees.",
+        "base_fee_usd": 100,
+        "service_fee_usd": 0,
+        "biometrics_fee_usd": 0,
+        "official_link_label": "Russia Visa",
+        "official_link_url": "https://www.kdmid.ru"
+      },
+      {
+        "id": "study",
+        "label": "Student visa",
+        "type": "visa_required",
+        "overview": "For enrolled students at Russian institutions.",
+        "steps": [
+          "Get admission and invitation.",
+          "Apply for student visa.",
+          "Submit documents.",
+          "After arrival, extend/migrate to study residence."
+        ],
+        "checklist": [
+          "Admission letter",
+          "Invitation",
+          "Valid passport",
+          "Photos",
+          "Application form",
+          "Medical/HIV certificate (for long stays)"
+        ],
+        "processing_time": "Several weeks.",
+        "fees": "Consular + service fees.",
+        "official_link_label": "Study in Russia",
+        "official_link_url": "https://studyinrussia.ru"
+      },
+      {
+        "id": "work",
+        "label": "Work visa",
+        "type": "visa_required",
+        "overview": "For foreign workers with invitation.",
+        "steps": [
+          "Get job offer and work invitation.",
+          "Apply for work visa.",
+          "Submit documents.",
+          "After arrival, register and complete migration."
+        ],
+        "checklist": [
+          "Work invitation",
+          "Employment contract",
+          "Valid passport",
+          "Photos",
+          "Application form"
+        ],
+        "processing_time": "Several weeks.",
+        "fees": "Consular + service fees.",
+        "official_link_label": "Work in Russia",
+        "official_link_url": "https://www.mvd.ru"
+      }
+    ],
+    "pr_info": {
+      "overview": "Temporary and permanent residence permits available under certain conditions.",
+      "main_pathways": [
+        "Temporary residence permit (RVP)",
+        "Permanent residence permit (VNZH)",
+        "Simplified procedures for some categories"
+      ],
+      "typical_requirements": [
+        "Legal residence",
+        "Income proof",
+        "Language/history/law exam (for PR)",
+        "Medical certificates"
+      ],
+      "official_link_label": "Russian Residence",
+      "official_link_url": "https://www.mvd.ru"
+    }
+  },
+  { "country_name": "Afghanistan", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Albania", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Algeria", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Andorra", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Angola", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Antigua and Barbuda", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Argentina", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Armenia", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Austria", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Azerbaijan", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Bahamas", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Bahrain", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Barbados", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Belarus", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Belgium", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Belize", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Benin", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Bhutan", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Bolivia", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Bosnia and Herzegovina", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Botswana", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Brazil", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Brunei", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Bulgaria", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Burkina Faso", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Burundi", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Cabo Verde", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Cambodia", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Cameroon", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Central African Republic", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Chad", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Chile", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Colombia", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Comoros", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Congo (Congo-Brazzaville)", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Congo (Democratic Republic)", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Costa Rica", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Croatia", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Cuba", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Cyprus", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Czechia", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Denmark", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Djibouti", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Dominica", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Dominican Republic", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Ecuador", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Egypt", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "El Salvador", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Equatorial Guinea", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Eritrea", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Estonia", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Eswatini", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Ethiopia", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Fiji", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Gabon", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Gambia", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Georgia", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Ghana", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Greece", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Grenada", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Guatemala", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Guinea", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Guinea-Bissau", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Guyana", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Haiti", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Honduras", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Hungary", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Iceland", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Indonesia", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Iran", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Iraq", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Israel", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Jamaica", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Jordan", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Kazakhstan", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Kenya", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Kiribati", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Kosovo", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Kuwait", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Kyrgyzstan", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Laos", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Latvia", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Lebanon", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Lesotho", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Liberia", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Libya", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Liechtenstein", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Lithuania", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Luxembourg", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Madagascar", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Malawi", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Malaysia", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Maldives", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Mali", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Malta", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Marshall Islands", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Mauritania", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Mauritius", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Mexico", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Micronesia", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Moldova", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Monaco", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Mongolia", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Montenegro", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Morocco", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Mozambique", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Myanmar", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Namibia", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Nauru", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Nepal", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "New Zealand", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Nicaragua", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Niger", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Nigeria", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "North Korea", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "North Macedonia", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Oman", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Palau", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Palestine", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Panama", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Papua New Guinea", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Paraguay", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Peru", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Philippines", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Poland", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Portugal", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Romania", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Rwanda", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Saint Kitts and Nevis", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Saint Lucia", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Saint Vincent and the Grenadines", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Samoa", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "San Marino", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Sao Tome and Principe", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Senegal", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Serbia", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Seychelles", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Sierra Leone", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Singapore", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Slovakia", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Slovenia", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Solomon Islands", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Somalia", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "South Africa", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "South Korea", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "South Sudan", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Spain", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Sri Lanka", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Sudan", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Suriname", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Sweden", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Syria", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Tajikistan", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Tanzania", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Thailand", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Timor-Leste", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Togo", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Tonga", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Trinidad and Tobago", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Tunisia", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Turkmenistan", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Tuvalu", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Uganda", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Ukraine", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Uruguay", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Uzbekistan", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Vanuatu", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Vatican City", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Venezuela", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Vietnam", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Yemen", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Zambia", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null },
+  { "country_name": "Zimbabwe", "visa_free": 0, "visa_on_arrival": 0, "eta": 0, "visa_required": 0, "passport_rank": null, "visa_categories": [], "pr_info": null }
+]

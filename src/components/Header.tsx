@@ -1,61 +1,55 @@
-"use client";
-
-import Link from "next/link";
-import { useLanguage } from "@/lib/LanguageContext";
-import { ThemeToggle } from "@/components/ThemeToggle";
-import { LanguageSwitcher } from "@/components/LanguageSwitcher";
-
 export function Header() {
-  const { t } = useLanguage();
-
   return (
-    <header className="sticky top-0 z-50 border-b border-[var(--border)] bg-[var(--background)]/85 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center gap-4 px-4 py-3 sm:px-6">
-        <Link href="/" className="mr-auto flex items-center gap-2 font-semibold tracking-tight">
-          <span className="flex h-7 w-7 items-center justify-center text-[var(--accent)]">
-            <svg viewBox="0 0 32 32" width="24" height="24">
-              <path
-                d="M16 2 L28 7 V16 C28 23 22.5 28.5 16 30 C9.5 28.5 4 23 4 16 V7 Z"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-              />
-              <path
-                d="M10.5 16.5 L14 20 L21.5 12"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+    <>
+      {/* Data availability banner */}
+      <div className="border-b border-[var(--border)] bg-[var(--surface-2)]">
+        <div className="mx-auto max-w-6xl px-4 py-2 text-xs text-[var(--text-muted)] sm:px-6">
+          Detailed visa & PR data is available for 21 countries:
+          <span className="ml-1 font-medium text-[var(--foreground)]">
+            USA, UK, Canada, Australia, Germany, Switzerland, France, Ireland, Finland, Norway, Pakistan, India, Bangladesh, Saudi Arabia, UAE, Turkey, Qatar, Italy, China, Japan, Russia.
           </span>
-          GlobalVisa<span className="text-[var(--accent)]">Flow</span>
-        </Link>
-
-        <nav
-          aria-label="Primary"
-          className="flex items-center gap-4 overflow-x-auto whitespace-nowrap text-sm text-[var(--text-muted)] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:gap-6"
-        >
-          <Link href="/" className="shrink-0 hover:text-[var(--foreground)]">
-            {t.nav_home}
-          </Link>
-          <Link href="/#pr-section" className="shrink-0 hover:text-[var(--foreground)]">
-            {t.nav_pr}
-          </Link>
-          <Link href="/#how-it-works" className="shrink-0 hover:text-[var(--foreground)]">
-            {t.nav_how}
-          </Link>
-          <Link href="/guide" className="shrink-0 hover:text-[var(--foreground)]">
-            {t.nav_guide}
-          </Link>
-        </nav>
-
-        <div className="flex shrink-0 items-center gap-2">
-          <LanguageSwitcher />
-          <ThemeToggle />
+          {" "}For other countries, only basic info is shown.
         </div>
       </div>
-    </header>
+
+      {/* Main header */}
+      <header className="sticky top-0 z-50 border-b border-[var(--border)] bg-[var(--background)]/80 backdrop-blur">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
+          <a
+            href="#top"
+            style={{
+              fontSize: "1rem",
+              fontWeight: 900,
+              letterSpacing: "0.025em",
+              color: "#6366f1", // indigo-500, change if you want another blue
+              textDecoration: "none",
+            }}
+          >
+            GlobalVisa Flow
+          </a>
+
+          <nav className="hidden items-center gap-6 text-sm sm:flex">
+            <a href="#top" className="hover:text-[var(--accent)]">
+              Home
+            </a>
+            <a href="#how-it-works" className="hover:text-[var(--accent)]">
+              How it works
+            </a>
+            <a href="#pr" className="hover:text-[var(--accent)]">
+              PR Guide
+            </a>
+          </nav>
+
+          <div className="flex items-center gap-3">
+            <a
+              href="#top"
+              className="rounded-md border border-[var(--border-strong)] bg-[var(--surface)] px-3 py-1.5 text-xs font-semibold hover:border-[var(--accent)]"
+            >
+              Get started
+            </a>
+          </div>
+        </div>
+      </header>
+    </>
   );
 }

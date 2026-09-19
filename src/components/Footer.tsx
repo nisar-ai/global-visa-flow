@@ -1,37 +1,40 @@
-"use client";
-
-import Link from "next/link";
-import { useLanguage } from "@/lib/LanguageContext";
-
 export function Footer() {
-  const { t } = useLanguage();
-
   return (
-    <footer className="relative z-10 border-t border-[var(--border)]">
+    <footer className="mt-16 border-t border-[var(--border)] bg-[var(--surface)]">
       <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
-        <div className="flex items-center gap-4 rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5">
-          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[var(--border-strong)] bg-[var(--surface-2)] font-semibold text-[var(--accent)]">
-            NA
+        <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
+          <div className="text-sm text-[var(--text-muted)]">
+            © {new Date().getFullYear()} GlobalVisa Flow. Informational only.
           </div>
-          <div>
-            <p className="font-mono text-[0.65rem] tracking-[0.1em] text-[var(--text-faint)]">BUILT BY</p>
-            <h2 className="text-base font-semibold">Nisar Ahmad</h2>
-            <p className="text-sm text-[var(--text-muted)]">
-              COMSATS University Islamabad, Sahiwal Campus — Pakistan
-            </p>
+
+          <div className="flex items-center gap-4 text-sm">
+            <a href="#top" className="hover:text-[var(--accent)]">
+              Home
+            </a>
+            <a href="#how-it-works" className="hover:text-[var(--accent)]">
+              How it works
+            </a>
+            <a href="#pr" className="hover:text-[var(--accent)]">
+              PR Guide
+            </a>
           </div>
         </div>
 
-        <div className="mt-6 flex flex-col gap-3 text-sm text-[var(--text-faint)] sm:flex-row sm:items-center sm:justify-between">
-          <span>© 2026 GlobalVisa Flow. {t.footer_rights}</span>
-          <span className="flex gap-4">
-            <Link href="/guide" className="hover:text-[var(--text-muted)]">
-              {t.nav_guide}
-            </Link>
-            <Link href="/#top" className="hover:text-[var(--text-muted)]">
-              {t.nav_home}
-            </Link>
-          </span>
+        <div className="mx-auto mt-6 max-w-2xl text-center text-xs text-[var(--text-faint)]">
+          This site provides general information only. Always confirm requirements
+          and fees on the official government website before applying.
+        </div>
+
+        <div className="mx-auto mt-8 max-w-2xl text-center">
+          <p className="text-lg font-extrabold tracking-tight text-[var(--foreground)]">
+            Built by{" "}
+            <span className="text-xl font-black text-[var(--accent)]">
+              Nisar Ahmad
+            </span>
+          </p>
+          <p className="mt-1 text-base font-bold text-[var(--text-muted)]">
+            CUI Sahiwal Campus
+          </p>
         </div>
       </div>
     </footer>

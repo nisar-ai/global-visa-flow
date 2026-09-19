@@ -13,25 +13,39 @@ interface LanguageContextValue {
 const LanguageContext = createContext<LanguageContextValue | undefined>(undefined);
 
 const STORAGE_KEY = "gvf-language";
+const DEFAULT_LANGUAGE: LanguageCode = "en";
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguageState] = useState<LanguageCode>("en");
+  const [language, setLanguageState] = useState<LanguageCode>(DEFAULT_LANGUAGE);
 
   useEffect(() => {
-    const stored = window.localStorage.getItem(STORAGE_KEY) as LanguageCode | null;
-    if (stored && dictionaries[stored]) {
-      // Deliberate: hydrate saved preference after mount (SSR has no access to localStorage).
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      setLanguageState(stored);
+    try {
+      const stored = window.localStorage.getItem(STORAGE_KEY) as LanguageCode | null;
+      if (stored && dictionaries[stored]) {
+        // Hydrate saved preference after mount (SSR has no access to localStorage).
+        // eslint-disable-next-line react-hooks/set-state-in-effect
+        setLanguageState(stored);
+      }
+    } catch {
+      // If localStorage is unavailable (private browsing, etc.), stay on default.
     }
   }, []);
 
   const setLanguage = useCallback((code: LanguageCode) => {
+    if (!dictionaries[code]) {
+      // Fallback to default if an invalid code is passed.
+      code = DEFAULT_LANGUAGE;
+    }
     setLanguageState(code);
-    window.localStorage.setItem(STORAGE_KEY, code);
+    try {
+      window.localStorage.setItem(STORAGE_KEY, code);
+    } catch {
+      // Ignore storage errors.
+    }
   }, []);
 
-  const dir = languageOptions.find((l) => l.code === language)?.dir ?? "ltr";
+  const langOption = languageOptions.find((l) => l.code === language);
+  const dir = langOption?.dir ?? "ltr";
 
   useEffect(() => {
     document.documentElement.lang = language;
@@ -41,7 +55,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const value: LanguageContextValue = {
     language,
     setLanguage,
-    t: dictionaries[language],
+    t: dictionaries[language] ?? dictionaries[DEFAULT_LANGUAGE],
     dir,
   };
 
@@ -50,6 +64,8 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
 export function useLanguage() {
   const ctx = useContext(LanguageContext);
-  if (!ctx) throw new Error("useLanguage must be used within a LanguageProvider");
+  if (!ctx) {
+    throw new Error("useLanguage must be used within a LanguageProvider");
+  }
   return ctx;
 }

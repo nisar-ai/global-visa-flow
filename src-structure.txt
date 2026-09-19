@@ -1,0 +1,47 @@
+Folder PATH listing
+Volume serial number is 848F-5AC1
+C:\USERS\IAMNI\GLOBAL-VISA-FLOW\GLOBAL-VISA-FLOW\SRC
++---app
+|   |   favicon.ico
+|   |   globals.css
+|   |   layout.tsx
+|   |   page.tsx
+|   |   providers.tsx
+|   |   
+|   \---guide
+|       |   page.tsx
+|       |   
+|       \---[slug]
+|               page.tsx
+|               
++---components
+|       Checklist.tsx
+|       CostCalculator.tsx
+|       CountryHeroImage.tsx
+|       CountryVisual.tsx
+|       FlightAnimation.tsx
+|       Footer.tsx
+|       GuideDetailClient.tsx
+|       Header.tsx
+|       HomeClient.tsx
+|       HowItWorks.tsx
+|       LanguageSwitcher.tsx
+|       OfficialLinksRow.tsx
+|       PassportPowerBadge.tsx
+|       PRSection.tsx
+|       ResultCard.tsx
+|       SiteNotice.tsx
+|       ThemeToggle.tsx
+|       VisaTimeline.tsx
+|       
++---data
+|       countries.json
+|       exchange-rates.json
+|       i18n.ts
+|       
+\---lib
+        LanguageContext.tsx
+        ThemeContext.tsx
+        types.ts
+        useLocalStorageState.ts
+        
