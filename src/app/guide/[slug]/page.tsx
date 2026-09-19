@@ -1,12 +1,17 @@
 import { notFound } from "next/navigation";
 import countriesData from "@/data/countries.json";
-import type { CountriesFile } from "@/lib/types";
+import type { CountriesFile, Country } from "@/lib/types";
 import { GuideDetailClient } from "@/components/GuideDetailClient";
 
 const data = countriesData as unknown as CountriesFile;
+const countries = data as Country[];
+
+function makeSlug(name: string) {
+  return name.toLowerCase().replace(/\s+/g, "-");
+}
 
 export function generateStaticParams() {
-  return data.countries.map((c) => ({ slug: c.guide_slug }));
+  return countries.map((c) => ({ slug: makeSlug(c.country_name) }));
 }
 
 export async function generateMetadata({
@@ -15,7 +20,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const country = data.countries.find((c) => c.guide_slug === slug);
+  const country = countries.find((c) => makeSlug(c.country_name) === slug);
 
   return {
     title: country
@@ -37,15 +42,10 @@ export default async function GuideDetailPage({
   const { slug } = await params;
   const { category } = await searchParams;
 
-  const country = data.countries.find((c) => c.guide_slug === slug);
+  const country = countries.find((c) => makeSlug(c.country_name) === slug);
   if (!country) {
     notFound();
   }
 
-  return (
-    <GuideDetailClient
-      country={country}
-      initialCategoryId={category}
-    />
-  );
+  return <GuideDetailClient country={country} initialCategoryId={category} />;
 }
