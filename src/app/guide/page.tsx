@@ -1,56 +1,52 @@
-import Link from "next/link";
+import { notFound } from "next/navigation";
 import countriesData from "@/data/countries.json";
 import type { CountriesFile, Country } from "@/lib/types";
-import { CountryVisual } from "@/components/CountryVisual";
+import { GuideDetailClient } from "@/components/GuideDetailClient";
 
 const data = countriesData as unknown as CountriesFile;
+const countries = data as Country[];
 
-export const metadata = {
-  title: "VisaFlow Guide — Step-by-Step Visa Application Guides",
-  description:
-    "Plain-language, step-by-step guides for applying for a tourist, study, work, or PR/citizenship visa.",
-};
+// Helper to create a slug from country_name
+function makeSlug(name: string) {
+  return name.toLowerCase().replace(/\s+/g, "-");
+}
 
-export default function GuideIndexPage() {
-  // data is already Country[]
-  const countries = data as Country[];
+export function generateStaticParams() {
+  return countries.map((c) => ({ slug: makeSlug(c.country_name) }));
+}
 
-  return (
-    <section className="px-4 py-16 sm:px-6">
-      <div className="mx-auto max-w-4xl text-center">
-        <p className="font-mono text-xs tracking-[0.14em] text-[var(--accent)]">
-          VISAFLOW GUIDE
-        </p>
-        <h1 className="mt-3 text-3xl font-bold sm:text-4xl">
-          Pick a country to see its full guide
-        </h1>
-        <p className="mx-auto mt-4 max-w-[56ch] text-[var(--text-muted)]">
-          Each guide covers tourist, study, work, and PR/citizenship steps, with official government links.
-        </p>
-      </div>
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const country = countries.find((c) => makeSlug(c.country_name) === slug);
 
-      <div className="mx-auto mt-10 grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-2">
-        {countries.map((country) => (
-          <Link
-            key={country.country_name}
-            href={`/guide/${country.country_name.toLowerCase().replace(/\s+/g, "-")}`}
-            className="flex items-center gap-4 rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5 transition-colors hover:border-[var(--border-strong)]"
-          >
-            <CountryVisual
-              flagEmoji={(country as any).flag_emoji || "🌍"}
-              accentColor={(country as any).accent_color || "#3b82f6"}
-            />
-            <div>
-              <h2 className="font-semibold">{country.country_name}</h2>
-              <p className="text-sm text-[var(--text-muted)]">
-                {(country.visa_categories || [])
-                  .map((c) => c.label)
-                  .join(" · ")}
-              </p>
-            </div>
-          </Link>
-        ))}
-      </div>
-    </section>
-  );
+  return {
+    title: country
+      ? `${country.country_name} Visa Guide — VisaFlow`
+      : "VisaFlow Guide",
+    description: country
+      ? `Step-by-step guidance for tourist, study, work, and PR/citizenship visas for ${country.country_name}.`
+      : "Step-by-step visa application guidance.",
+  };
+}
+
+export default async function GuideDetailPage({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ slug: string }>;
+  searchParams: Promise<{ category?: string }>;
+}) {
+  const { slug } = await params;
+  const { category } = await searchParams;
+
+  const country = countries.find((c) => makeSlug(c.country_name) === slug);
+  if (!country) {
+    notFound();
+  }
+
+  return <GuideDetailClient country={country} initialCategoryId={category} />;
 }
