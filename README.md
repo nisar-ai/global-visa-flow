@@ -64,3 +64,4 @@ next-themes.
 ---
 Built by **Nisar Ahmad** — COMSATS University Islamabad, Sahiwal Campus, Pakistan.
 "# trigger redeploy" 
+"# force new vercel build" 
