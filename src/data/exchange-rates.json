@@ -1,0 +1,8 @@
+{
+  "_meta": "Approximate, illustrative exchange rates only \u2014 NOT live rates. Replace with a live FX API (e.g. exchangerate.host, openexchangerates.org) before production use. Rates as assumed for mid-2026.",
+  "USD": 1,
+  "EUR": 1.09,
+  "GBP": 1.27,
+  "SAR": 0.2667,
+  "TRY": 0.031
+}

@@ -1,0 +1,706 @@
+{
+  "_meta": {
+    "note": "Sample/demo dataset for a portfolio project. Visa rules, fees, and links change frequently — always confirm on the linked official government site before applying. Coverage currently includes 5 countries; extend the 'countries' array with the same shape to add more.",
+    "last_reviewed": "2026-07-24"
+  },
+  "countries": [
+    {
+      "country_code": "DE",
+      "country_name": "Germany",
+      "region": "Europe",
+      "guide_slug": "germany",
+      "flag_emoji": "🇩🇪",
+      "accent_color": "#e0a13c",
+      "official_links": {
+        "ministry": "https://www.auswaertiges-amt.de/en",
+        "visa_portal": "https://www.auswaertiges-amt.de/en/visa-service/consular-services-portal"
+      },
+      "visa_categories": [
+        {
+          "category_id": "tourist",
+          "label": "Tourist / Schengen Visa",
+          "visa_type": "Schengen Visa (Type C) — Tourism",
+          "fee_amount": {
+            "amount": 90,
+            "currency": "EUR"
+          },
+          "processing_time": "10-15 calendar days",
+          "required_documents": [
+            "Valid passport (issued within 10 years, valid 3+ months beyond stay)",
+            "Completed Schengen visa application form",
+            "Travel health insurance covering at least €30,000",
+            "Proof of accommodation (hotel booking or invitation letter)",
+            "Bank statements showing sufficient funds for the trip"
+          ],
+          "step_by_step_guideline": [
+            "Confirm you need a Schengen visa and Germany is your main destination.",
+            "Book an appointment at the German consulate or an authorized visa center.",
+            "Submit your application, biometrics, and supporting documents in person.",
+            "Track your application and collect your passport once the visa is issued."
+          ],
+          "processing_estimate": {
+            "min": 10,
+            "max": 15,
+            "unit": "days"
+          }
+        },
+        {
+          "category_id": "study",
+          "label": "Student Visa",
+          "visa_type": "National Visa (Type D) — Study",
+          "fee_amount": {
+            "amount": 75,
+            "currency": "EUR"
+          },
+          "processing_time": "4-12 weeks",
+          "required_documents": [
+            "University admission/enrollment letter",
+            "Proof of a blocked account (Sperrkonto) or equivalent financing proof",
+            "Health insurance valid in Germany",
+            "Academic certificates and transcripts",
+            "Valid passport and biometric photos"
+          ],
+          "step_by_step_guideline": [
+            "Secure admission to a German university or a recognized preparatory course.",
+            "Open a blocked account and deposit the required annual living-cost amount.",
+            "Book a visa appointment and submit your documents at the German mission.",
+            "Enter Germany and register your address and residence permit locally."
+          ],
+          "processing_estimate": {
+            "min": 4,
+            "max": 12,
+            "unit": "weeks"
+          }
+        },
+        {
+          "category_id": "work",
+          "label": "Work Visa",
+          "visa_type": "National Visa (Type D) — Skilled Worker",
+          "fee_amount": {
+            "amount": 75,
+            "currency": "EUR"
+          },
+          "processing_time": "15-20 business days",
+          "required_documents": [
+            "Valid passport (minimum 6 months validity beyond intended stay)",
+            "Completed national visa application form",
+            "Biometric passport photographs (2, taken within last 6 months)",
+            "Proof of qualification recognition (Anerkennung) or employment contract",
+            "Proof of health insurance valid in Germany"
+          ],
+          "step_by_step_guideline": [
+            "Book an appointment at the German consulate or embassy in your home country.",
+            "Submit the completed application form along with all required supporting documents.",
+            "Attend the biometric data collection and in-person interview at the consulate.",
+            "Track application status online and collect the visa once a decision has been issued."
+          ],
+          "processing_estimate": {
+            "min": 15,
+            "max": 20,
+            "unit": "days"
+          }
+        },
+        {
+          "category_id": "pr",
+          "label": "PR / Citizenship",
+          "visa_type": "Settlement Permit & Naturalization (Einbürgerung)",
+          "fee_amount": {
+            "amount": 255,
+            "currency": "EUR"
+          },
+          "processing_time": "6-18 months, after required residency years are met",
+          "required_documents": [
+            "Proof of continuous legal residence (typically 5-8 years, less with strong integration)",
+            "German language certificate (B1 minimum, C1 for faster naturalization)",
+            "Passed 'Leben in Deutschland' naturalization test certificate",
+            "Proof of stable income and no reliance on public welfare",
+            "Clean criminal record certificate (Führungszeugnis)"
+          ],
+          "step_by_step_guideline": [
+            "Confirm you meet the minimum legal residence period for your visa route.",
+            "Pass the required German language level and the naturalization test.",
+            "Submit your application with proof of income and a clean record to your local immigration office.",
+            "Attend the final interview and receive your settlement permit or naturalization certificate."
+          ],
+          "processing_estimate": {
+            "min": 6,
+            "max": 18,
+            "unit": "months"
+          }
+        }
+      ],
+      "currency": "EUR",
+      "language_code": "de",
+      "language_name": "Deutsch"
+    },
+    {
+      "country_code": "GB",
+      "country_name": "United Kingdom",
+      "region": "Europe",
+      "guide_slug": "united-kingdom",
+      "flag_emoji": "🇬🇧",
+      "accent_color": "#3b5bdb",
+      "official_links": {
+        "ministry": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "visa_portal": "https://www.gov.uk/browse/visas-immigration"
+      },
+      "visa_categories": [
+        {
+          "category_id": "tourist",
+          "label": "Tourist / Visitor Visa",
+          "visa_type": "Standard Visitor Visa",
+          "fee_amount": {
+            "amount": 115,
+            "currency": "GBP"
+          },
+          "processing_time": "About 3 weeks",
+          "required_documents": [
+            "Valid passport or travel document",
+            "Completed online Standard Visitor application",
+            "Bank statements showing sufficient funds",
+            "Proof of accommodation for your stay",
+            "Return or onward travel itinerary"
+          ],
+          "step_by_step_guideline": [
+            "Check whether your nationality needs a visa or an ETA to visit the UK.",
+            "Complete the Standard Visitor visa application online and pay the fee.",
+            "Book and attend a biometric appointment at a visa application centre.",
+            "Wait for the decision — most are made within about 3 weeks."
+          ],
+          "processing_estimate": {
+            "min": 15,
+            "max": 21,
+            "unit": "days"
+          }
+        },
+        {
+          "category_id": "study",
+          "label": "Student Visa",
+          "visa_type": "Student Visa",
+          "fee_amount": {
+            "amount": 490,
+            "currency": "GBP"
+          },
+          "processing_time": "About 3 weeks",
+          "required_documents": [
+            "Confirmation of Acceptance for Studies (CAS) from a licensed sponsor",
+            "Valid passport",
+            "Proof of funds for tuition and living costs",
+            "Academic qualifications and transcripts",
+            "Tuberculosis test results, if required for your country"
+          ],
+          "step_by_step_guideline": [
+            "Get your Confirmation of Acceptance for Studies (CAS) from your UK institution.",
+            "Complete the online Student visa application and pay the fee plus the Immigration Health Surcharge.",
+            "Provide biometric data at a visa application centre or via the ID-check app.",
+            "Receive your decision and set up your UKVI account for your eVisa."
+          ],
+          "processing_estimate": {
+            "min": 15,
+            "max": 21,
+            "unit": "days"
+          }
+        },
+        {
+          "category_id": "work",
+          "label": "Work Visa",
+          "visa_type": "Skilled Worker Visa",
+          "fee_amount": {
+            "amount": 719,
+            "currency": "GBP"
+          },
+          "processing_time": "3-8 weeks",
+          "required_documents": [
+            "Valid passport or other travel document",
+            "Certificate of Sponsorship (CoS) reference number from a licensed UK employer",
+            "Proof of English language proficiency (approved test or qualification)",
+            "Proof of sufficient personal savings (bank statements, if required)",
+            "Tuberculosis (TB) test results, if applying from a listed country"
+          ],
+          "step_by_step_guideline": [
+            "Obtain a Certificate of Sponsorship from a UK Home Office-licensed employer.",
+            "Complete the online visa application form on the UK government website.",
+            "Pay the visa application fee and the Immigration Health Surcharge (IHS).",
+            "Attend a biometric appointment at a visa application centre and await the decision."
+          ],
+          "processing_estimate": {
+            "min": 21,
+            "max": 56,
+            "unit": "days"
+          }
+        },
+        {
+          "category_id": "pr",
+          "label": "PR / Citizenship",
+          "visa_type": "Indefinite Leave to Remain (ILR) & British Citizenship",
+          "fee_amount": {
+            "amount": 3226,
+            "currency": "GBP"
+          },
+          "processing_time": "Typically after 5 years' residence; ILR decision within 6 months",
+          "required_documents": [
+            "Proof of continuous residence for the qualifying period on your visa route",
+            "Pass certificate for the Life in the UK Test",
+            "English language qualification (B1 or above)",
+            "Criminal record / good character evidence",
+            "Current visa/BRP or eVisa share code"
+          ],
+          "step_by_step_guideline": [
+            "Confirm your visa route's qualifying residence period (rules are under active reform in 2026).",
+            "Pass the Life in the UK Test and meet the English language requirement.",
+            "Apply for Indefinite Leave to Remain (ILR) online through the UKVI account.",
+            "Once ILR is granted, apply separately for British citizenship (naturalisation) if desired."
+          ],
+          "official_links": {
+            "visa_portal": "https://www.gov.uk/browse/visas-immigration/settle-in-the-uk",
+            "ministry": "https://www.gov.uk/government/organisations/uk-visas-and-immigration"
+          },
+          "processing_estimate": {
+            "min": 60,
+            "max": 120,
+            "unit": "months"
+          }
+        }
+      ],
+      "currency": "GBP",
+      "language_code": "en",
+      "language_name": "English"
+    },
+    {
+      "country_code": "US",
+      "country_name": "United States",
+      "region": "North America",
+      "guide_slug": "united-states",
+      "flag_emoji": "🇺🇸",
+      "accent_color": "#4c6ef5",
+      "official_links": {
+        "ministry": "https://travel.state.gov/content/travel/en/us-visas.html",
+        "visa_portal": "https://travel.state.gov/content/travel/en/us-visas.html",
+        "embassy_locator": "https://www.usembassy.gov/"
+      },
+      "visa_categories": [
+        {
+          "category_id": "tourist",
+          "label": "Tourist Visa",
+          "visa_type": "B-2 Tourist Visa",
+          "fee_amount": {
+            "amount": 185,
+            "currency": "USD"
+          },
+          "processing_time": "Varies widely by embassy — often several weeks",
+          "required_documents": [
+            "Valid passport (6+ months beyond planned stay recommended)",
+            "Form DS-160 confirmation page",
+            "Visa photo meeting US requirements",
+            "Evidence of ties to your home country (job, family, property)",
+            "Proof of sufficient funds for the trip"
+          ],
+          "step_by_step_guideline": [
+            "Complete Form DS-160 online and print the confirmation page.",
+            "Pay the visa application (MRV) fee.",
+            "Schedule and attend your interview at a US embassy or consulate.",
+            "Provide biometrics at the interview and await the visa decision."
+          ],
+          "processing_estimate": {
+            "min": 14,
+            "max": 120,
+            "unit": "days"
+          }
+        },
+        {
+          "category_id": "study",
+          "label": "Student Visa",
+          "visa_type": "F-1 Student Visa",
+          "fee_amount": {
+            "amount": 185,
+            "currency": "USD"
+          },
+          "processing_time": "Varies by embassy, plus SEVIS processing",
+          "required_documents": [
+            "Form I-20 from a SEVP-certified school",
+            "SEVIS I-901 fee payment receipt",
+            "Form DS-160 confirmation page",
+            "Proof of financial support for tuition and living costs",
+            "Academic transcripts and standardized test scores"
+          ],
+          "step_by_step_guideline": [
+            "Get accepted and receive Form I-20 from a SEVP-certified US school.",
+            "Pay the SEVIS I-901 fee and complete Form DS-160.",
+            "Schedule and attend your F-1 visa interview at a US embassy or consulate.",
+            "Provide biometrics and await your visa decision before travel."
+          ],
+          "processing_estimate": {
+            "min": 14,
+            "max": 120,
+            "unit": "days"
+          }
+        },
+        {
+          "category_id": "work",
+          "label": "Work Visa",
+          "visa_type": "H-1B Specialty Occupation Visa",
+          "fee_amount": {
+            "amount": 190,
+            "currency": "USD"
+          },
+          "processing_time": "2-6 months (standard); 15 calendar days with premium processing",
+          "required_documents": [
+            "Valid passport (recommended validity of at least 6 months)",
+            "Form DS-160 confirmation page",
+            "Approved Form I-797 (Notice of Action) from USCIS",
+            "Employer's Labor Condition Application (LCA) certified by the Department of Labor",
+            "Educational credentials and resume demonstrating specialty occupation qualification"
+          ],
+          "step_by_step_guideline": [
+            "Employer files a Labor Condition Application (LCA) and then Form I-129 petition with USCIS.",
+            "Complete Form DS-160 online and schedule a visa interview at a US embassy or consulate.",
+            "Attend the visa interview and provide biometric data along with supporting documents.",
+            "Await administrative processing and passport return with the visa stamp, if approved."
+          ],
+          "processing_estimate": {
+            "min": 60,
+            "max": 180,
+            "unit": "days"
+          }
+        },
+        {
+          "category_id": "pr",
+          "label": "PR / Citizenship",
+          "visa_type": "Green Card (Permanent Residency) & Naturalization",
+          "fee_amount": {
+            "amount": 1440,
+            "currency": "USD"
+          },
+          "processing_time": "Green Card: several months to years; naturalization eligible after 5 years (3 if married to a citizen)",
+          "required_documents": [
+            "Approved immigrant petition (Form I-130 family or I-140 employment)",
+            "Form I-485 (Adjustment of Status) or consular processing documents",
+            "Medical examination report (Form I-693)",
+            "Proof of continuous residence and physical presence",
+            "Form N-400 naturalization application (once eligible)"
+          ],
+          "step_by_step_guideline": [
+            "Have an eligible family member or employer file an immigrant petition (I-130 or I-140) on your behalf.",
+            "File for adjustment of status (I-485) or complete consular processing to receive your Green Card.",
+            "Maintain continuous residence for the required period (usually 5 years, or 3 if married to a US citizen).",
+            "File Form N-400, attend your biometrics/interview, pass the civics test, and take the Oath of Allegiance."
+          ],
+          "official_links": {
+            "visa_portal": "https://www.uscis.gov/green-card",
+            "ministry": "https://www.uscis.gov/citizenship"
+          },
+          "processing_estimate": {
+            "min": 60,
+            "max": 96,
+            "unit": "months"
+          }
+        }
+      ],
+      "currency": "USD",
+      "language_code": "en",
+      "language_name": "English"
+    },
+    {
+      "country_code": "SA",
+      "country_name": "Saudi Arabia",
+      "region": "Middle East",
+      "guide_slug": "saudi-arabia",
+      "flag_emoji": "🇸🇦",
+      "accent_color": "#2f9e6e",
+      "official_links": {
+        "ministry": "https://www.mofa.gov.sa/en",
+        "visa_portal": "https://visa.mofa.gov.sa/"
+      },
+      "visa_categories": [
+        {
+          "category_id": "tourist",
+          "label": "Tourist eVisa",
+          "visa_type": "Tourist eVisa (single/multiple entry)",
+          "fee_amount": {
+            "amount": 480,
+            "currency": "SAR"
+          },
+          "processing_time": "Minutes to a few hours (standard online approval)",
+          "required_documents": [
+            "Valid passport (minimum 6 months validity from application date)",
+            "Recent digital passport-style photo",
+            "Confirmed return or onward flight booking",
+            "Proof of accommodation (hotel booking or host address)",
+            "Valid debit/credit card for the online eVisa fee"
+          ],
+          "step_by_step_guideline": [
+            "Confirm your nationality is on the eVisa eligibility list on the official tourist eVisa portal.",
+            "Create an account and complete the online application with passport and travel details.",
+            "Upload your photo and pay the eVisa fee securely by card.",
+            "Receive the eVisa by email — it is a multiple-entry visa valid for one year, up to 90 days per visit."
+          ],
+          "official_links": {
+            "visa_portal": "https://visa.visitsaudi.com/",
+            "ministry": "https://www.mofa.gov.sa/en"
+          },
+          "processing_estimate": {
+            "min": 0,
+            "max": 1,
+            "unit": "days"
+          }
+        },
+        {
+          "category_id": "study",
+          "label": "Student Visa",
+          "visa_type": "Student Visa (university-sponsored)",
+          "fee_amount": {
+            "amount": 2000,
+            "currency": "SAR"
+          },
+          "processing_time": "3-6 weeks (varies by university and consulate workload)",
+          "required_documents": [
+            "Valid passport (minimum 6 months validity)",
+            "Official admission/acceptance letter from a Saudi university or institute",
+            "Educational certificates and transcripts, attested by relevant authorities",
+            "Medical fitness certificate and required vaccination records",
+            "Passport-sized photographs meeting Saudi visa specifications"
+          ],
+          "step_by_step_guideline": [
+            "Secure admission at a Saudi university, which issues a sponsorship letter for your student visa.",
+            "The university submits your visa block/authorization through the Ministry of Foreign Affairs system.",
+            "Submit your passport and attested documents at the Saudi embassy or consulate for visa stamping.",
+            "Enter Saudi Arabia and complete Iqama (residence permit) registration through your university."
+          ],
+          "official_links": {
+            "visa_portal": "https://visa.mofa.gov.sa/",
+            "ministry": "https://www.mofa.gov.sa/en"
+          },
+          "processing_estimate": {
+            "min": 21,
+            "max": 42,
+            "unit": "days"
+          }
+        },
+        {
+          "category_id": "work",
+          "label": "Work Visa",
+          "visa_type": "Work Visa (Iqama-sponsored)",
+          "fee_amount": {
+            "amount": 2000,
+            "currency": "SAR"
+          },
+          "processing_time": "10-15 business days",
+          "required_documents": [
+            "Valid passport (minimum 6 months validity)",
+            "Signed employment contract attested by the Ministry of Labor",
+            "Educational certificates attested by the Saudi embassy and Ministry of Foreign Affairs",
+            "Medical fitness certificate from an approved medical center",
+            "Passport-sized photographs meeting Saudi visa specifications"
+          ],
+          "step_by_step_guideline": [
+            "Sponsoring employer obtains a work permit block visa from the Ministry of Human Resources.",
+            "Submit passport, attested documents, and medical certificate to the Saudi embassy for visa stamping.",
+            "Enter Saudi Arabia and complete the biometric enrollment for the Iqama (residence permit).",
+            "Receive the issued Iqama and finalize employer registration with GOSI and other authorities."
+          ],
+          "official_links": {
+            "visa_portal": "https://visa.mofa.gov.sa/",
+            "ministry": "https://www.mofa.gov.sa/en"
+          },
+          "processing_estimate": {
+            "min": 10,
+            "max": 15,
+            "unit": "days"
+          }
+        },
+        {
+          "category_id": "umrah",
+          "label": "Umrah Visa",
+          "visa_type": "Umrah Visa (via Nusuk platform)",
+          "fee_amount": {
+            "amount": 300,
+            "currency": "SAR"
+          },
+          "processing_time": "1-5 business days",
+          "required_documents": [
+            "Valid passport (minimum 6 months validity)",
+            "Recent digital passport-style photo",
+            "Proof of Umrah package/accommodation booking in Makkah and Madinah",
+            "Return or onward flight booking",
+            "Health/vaccination documentation required for the current season (e.g. meningitis)"
+          ],
+          "step_by_step_guideline": [
+            "Register on the official Nusuk Umrah platform as an international pilgrim.",
+            "Choose an integrated Umrah package or book visa, accommodation, and transport individually.",
+            "Submit passport details and pay the Umrah visa fee online through Nusuk.",
+            "Receive your Umrah visa and use the Nusuk app in-country to manage permits and Rawdah time slots."
+          ],
+          "official_links": {
+            "visa_portal": "https://umrah.nusuk.sa/",
+            "ministry": "https://www.mofa.gov.sa/en"
+          },
+          "processing_estimate": {
+            "min": 1,
+            "max": 5,
+            "unit": "days"
+          }
+        },
+        {
+          "category_id": "pr",
+          "label": "PR / Citizenship",
+          "visa_type": "Premium Residency (Saudi Green Card)",
+          "fee_amount": {
+            "amount": 800,
+            "currency": "SAR"
+          },
+          "processing_time": "Several weeks to months, depending on category",
+          "required_documents": [
+            "Valid passport (minimum 6 months validity)",
+            "Proof of financial eligibility (investment, property, or income requirement)",
+            "Clean criminal record certificate",
+            "Medical fitness certificate",
+            "Completed Premium Residency application form"
+          ],
+          "step_by_step_guideline": [
+            "Check eligibility for the Premium Residency (permanent) or renewable annual category.",
+            "Gather financial, medical, and background-check documentation.",
+            "Submit your application through the Premium Residency program under the Ministry of Interior.",
+            "Attend any required interview and receive your Premium Residency card upon approval."
+          ],
+          "processing_estimate": {
+            "min": 1,
+            "max": 3,
+            "unit": "months"
+          }
+        }
+      ],
+      "currency": "SAR",
+      "language_code": "ar",
+      "language_name": "العربية"
+    },
+    {
+      "country_code": "TR",
+      "country_name": "Turkey",
+      "region": "Europe/Asia",
+      "guide_slug": "turkey",
+      "flag_emoji": "🇹🇷",
+      "accent_color": "#e0483e",
+      "official_links": {
+        "ministry": "https://www.mfa.gov.tr/visa-information-for-foreigners.en.mfa",
+        "visa_portal": "https://www.evisa.gov.tr/en/"
+      },
+      "visa_categories": [
+        {
+          "category_id": "tourist",
+          "label": "Tourist e-Visa",
+          "visa_type": "e-Visa (tourism/business)",
+          "fee_amount": {
+            "amount": 50,
+            "currency": "USD"
+          },
+          "processing_time": "Minutes (instant online approval for most nationalities)",
+          "required_documents": [
+            "Valid passport (minimum 6 months validity)",
+            "Return or onward flight ticket",
+            "Proof of accommodation in Turkey",
+            "Proof of sufficient funds for the stay",
+            "Valid debit/credit card for the online e-Visa fee"
+          ],
+          "step_by_step_guideline": [
+            "Check your nationality's eligibility on the official e-Visa portal.",
+            "Complete the short online application with passport and travel details.",
+            "Pay the e-Visa fee securely online.",
+            "Receive your e-Visa by email and present it with your passport on arrival."
+          ],
+          "processing_estimate": {
+            "min": 0,
+            "max": 1,
+            "unit": "days"
+          }
+        },
+        {
+          "category_id": "study",
+          "label": "Student Residence Permit",
+          "visa_type": "Student Residence Permit",
+          "fee_amount": {
+            "amount": 70,
+            "currency": "USD"
+          },
+          "processing_time": "2-4 weeks after arrival",
+          "required_documents": [
+            "University acceptance/enrollment letter",
+            "Valid passport",
+            "Proof of health insurance valid in Turkey",
+            "Proof of accommodation",
+            "Passport-sized photographs"
+          ],
+          "step_by_step_guideline": [
+            "Get accepted by a Turkish university and receive your enrollment letter.",
+            "Apply for a student visa at a Turkish consulate, if required for your nationality.",
+            "After arrival, apply online (e-ikamet) for your student residence permit.",
+            "Submit biometrics and documents at the local migration office to collect your permit card."
+          ],
+          "processing_estimate": {
+            "min": 14,
+            "max": 28,
+            "unit": "days"
+          }
+        },
+        {
+          "category_id": "work",
+          "label": "Work Visa",
+          "visa_type": "Work Permit Visa",
+          "fee_amount": {
+            "amount": 60,
+            "currency": "USD"
+          },
+          "processing_time": "4-8 weeks",
+          "required_documents": [
+            "Valid passport (minimum 6 months validity)",
+            "Signed employment contract or job offer letter from Turkish employer",
+            "Notarized and translated educational diplomas or professional certificates",
+            "Passport-sized biometric photographs (2)",
+            "Proof of accommodation in Turkey during the work assignment"
+          ],
+          "step_by_step_guideline": [
+            "Employer submits the work permit application through the Turkish Ministry of Labor's online system.",
+            "Applicant submits the corresponding visa application at the Turkish consulate in their home country.",
+            "Attend the consulate interview and biometric appointment, if required.",
+            "Collect the approved work visa and register for the residence permit upon arrival in Turkey."
+          ],
+          "processing_estimate": {
+            "min": 28,
+            "max": 56,
+            "unit": "days"
+          }
+        },
+        {
+          "category_id": "pr",
+          "label": "PR / Citizenship",
+          "visa_type": "Long-Term Residence Permit & Turkish Citizenship",
+          "fee_amount": {
+            "amount": 90,
+            "currency": "USD"
+          },
+          "processing_time": "Several months, after residency or investment criteria are met",
+          "required_documents": [
+            "Proof of continuous legal residence (typically 8 years) or qualifying investment (e.g. real estate purchase)",
+            "Valid passport and existing residence permit history",
+            "Proof of financial stability and health insurance",
+            "Clean criminal record certificate",
+            "Completed long-term residence or citizenship application form"
+          ],
+          "step_by_step_guideline": [
+            "Confirm your route: standard long-term residence (8 years) or the investment-based citizenship program.",
+            "Gather residence history, financial, and clean-record documentation.",
+            "Apply at the Provincial Directorate of Migration Management (residence) or Ministry of Interior (citizenship).",
+            "Attend biometrics/interview and receive your long-term permit or citizenship decision."
+          ],
+          "processing_estimate": {
+            "min": 96,
+            "max": 120,
+            "unit": "months"
+          }
+        }
+      ],
+      "currency": "TRY",
+      "language_code": "tr",
+      "language_name": "Türkçe"
+    }
+  ]
+}
