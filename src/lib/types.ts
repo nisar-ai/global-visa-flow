@@ -1,4 +1,4 @@
-export type Country = {
+﻿export type Country = {
   country_name: string;
   visa_free: number;
   visa_on_arrival: number;
