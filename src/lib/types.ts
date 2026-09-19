@@ -37,3 +37,6 @@ export type PRInfo = {
   official_link_label?: string;
   official_link_url?: string;
 };
+
+// Top-level type for countries.json (array of Country)
+export type CountriesFile = Country[];
